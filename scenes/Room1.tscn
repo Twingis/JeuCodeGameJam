@@ -37,7 +37,7 @@ script = ExtResource("6_er00s")
 position = Vector2(422, -12)
 shape = SubResource("RectangleShape2D_5wic8")
 
-[node name="Note" parent="." instance=ExtResource("7_qwh6i")]
+[node name="Note1" parent="." instance=ExtResource("7_qwh6i")]
 position = Vector2(117, 1)
 scale = Vector2(2, 2)
 
@@ -71,10 +71,19 @@ position = Vector2(343, 0)
 scale = Vector2(2, 2)
 id = 6
 
+[node name="Label" type="Label" parent="."]
+offset_left = 384.0
+offset_top = -58.0
+offset_right = 424.0
+offset_bottom = -35.0
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note1" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note2" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note3" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note4" to="." method="_on_note_catch"]
