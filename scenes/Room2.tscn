@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ce40a1umwswsf"]
+[gd_scene load_steps=7 format=3 uid="uid://ce40a1umwswsf"]
 
 [ext_resource type="Script" path="res://scripts/room_2.gd" id="1_foy2v"]
 [ext_resource type="PackedScene" uid="uid://dnls8prj1vaxm" path="res://scenes/tilemap2.tscn" id="2_pfqsm"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_facok"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_vpeia"]
-[ext_resource type="Texture2D" uid="uid://q3nhef2pmx7s" path="res://assets/BarreDeVie/PNG/HealtBarInversé.png" id="5_5yvyt"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="5_ywel3"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="6_m8dqg"]
 
@@ -22,11 +21,10 @@ zoom = Vector2(4, 4)
 limit_bottom = 70
 
 [node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_vpeia")]
-offset_left = -118.704
-offset_top = 87.6189
-offset_right = 3721.3
-offset_bottom = 581.619
-texture_progress = ExtResource("5_5yvyt")
+offset_left = -138.823
+offset_top = 71.4431
+offset_right = 9593.18
+offset_bottom = 1741.44
 
 [node name="Note" parent="." instance=ExtResource("5_ywel3")]
 position = Vector2(153, 0)

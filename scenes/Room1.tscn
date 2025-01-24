@@ -25,11 +25,10 @@ zoom = Vector2(4, 4)
 limit_bottom = 70
 
 [node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_hv0jm")]
-offset_left = -143.853
-offset_top = 80.879
-offset_right = 3696.15
-offset_bottom = 574.879
-scale = Vector2(0.07, 0.05)
+offset_left = -138.823
+offset_top = 71.4431
+offset_right = 9593.18
+offset_bottom = 1741.44
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("6_er00s")
