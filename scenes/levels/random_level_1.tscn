@@ -667,6 +667,8 @@ offset_top = -286.0
 offset_right = 322.0
 offset_bottom = -263.0
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note1" to="." method="_on_note_catch"]

@@ -32,6 +32,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if notes_ramasses.size() < melody.size() :
 		$Label.text = "Vous n'avez pas toutes les notes"
 	else :
+		$Label.text = ""
 		notes_sorted = tri_notes(notes_ramasses, melody)
 		await play_notes_with_delay(notes_sorted, 0.5)  # 0.5 secondes entre chaque note
 
