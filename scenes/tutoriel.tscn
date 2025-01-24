@@ -48,9 +48,12 @@ offset_top = -8.0
 offset_right = 994.0
 offset_bottom = 254.0
 text = "Bienvenue dans ce tutoriel, nous allons dans cette page vous montrez les différentes touches utilisables.
-Les touhes directionnelles droite et gauche permettent de se diriger dans leurs directions respectueuses.
+Les touhes directionnelles droite et gauche permettent de se diriger dans leurs directions respectives.
 Pour sauter il faut appuyer sur la touche espace.
-Enfin pour ouvrir une porte pour passer au prochain niveau, il faut appuyer sur E."
+Enfin pour ouvrir une porte pour passer au prochain niveau, il faut appuyer sur E.
+
+Il vous faudra récupérer toutes les notes d'un niveau pour pouvoir passer au suivant.
+Toutes les 5 salles se trouve un boss que vous devrez vaincre grâce à un QTE (quick time event)."
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
