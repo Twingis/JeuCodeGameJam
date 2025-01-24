@@ -1,11 +1,12 @@
-[gd_scene load_steps=17 format=4 uid="uid://umjcj47snamt"]
+[gd_scene load_steps=18 format=4 uid="uid://umjcj47snamt"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_rbejo"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
 [ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
-[ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="5_hbp4r"]
+[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_hbp4r"]
+[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -629,3 +630,7 @@ position = Vector2(351, -244)
 [node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
 offset_left = 37.0
 offset_right = 9303.0
+
+[node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
+
+[connection signal="zero" from="CanvasLayer/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
