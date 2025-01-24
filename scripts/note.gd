@@ -1,5 +1,5 @@
 extends Area2D
-signal catch
+signal catch(note : Area2D)
 
 static var  sounds: Array = [
 	preload("res://assets/musics/95326__ramas26__a.mp3"),
@@ -25,6 +25,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D") :
 		hide()
-		catch.emit()
+		emit_signal("catch", self)
 		$CollisionShape2D.set_deferred("disabled", true)
 		$AudioStreamPlayer.play()
