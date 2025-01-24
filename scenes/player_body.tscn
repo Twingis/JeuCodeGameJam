@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ubge28h5l3qp"]
+[gd_scene load_steps=8 format=3 uid="uid://ubge28h5l3qp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6lcpc"]
 [ext_resource type="Texture2D" uid="uid://b5cxkyg1r6bp4" path="res://assets/menu/tilemap-characters_packed.png" id="2_31o88"]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yp7o8"]
 radius = 7.0
 height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65g3b"]
+atlas = ExtResource("2_31o88")
+region = Rect2(144, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8iov"]
 atlas = ExtResource("2_31o88")
@@ -19,13 +23,21 @@ region = Rect2(168, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_65g3b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x8iov")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oe2q7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -38,4 +50,4 @@ shape = SubResource("CapsuleShape2D_yp7o8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ch32k")
-autoplay = "default"
+animation = &"idle"

@@ -5,6 +5,15 @@ const SPEED = 120.0
 const JUMP_VELOCITY = -250.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+
+const MAX_HEALTH := 100
+const MAX_TIME := 20
+var health := 50 # à changer plus tard
+
+func _ready() :
+	pass
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
