@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://he4jdia13s8c"
+path="res://.godot/imported/FOODGware_Bouchon de champagne 2 (ID 0648)_LS.mp3-0863af9853defa3afb3cab16139fc82d.mp3str"
+
+[deps]
+
+source_file="res://assets/musics/FOODGware_Bouchon de champagne 2 (ID 0648)_LS.mp3"
+dest_files=["res://.godot/imported/FOODGware_Bouchon de champagne 2 (ID 0648)_LS.mp3-0863af9853defa3afb3cab16139fc82d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
