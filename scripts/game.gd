@@ -15,3 +15,6 @@ func _process(delta: float) -> void:
 func _on_note_catch() -> void:
 	var healthBar = get_node("CharacterBody2D/Camera2D/HealthBar/TextureProgressBar")
 	healthBar.add(100)
+
+func _on_texture_progress_bar_zéro() -> void:
+	get_tree().change_scene_to_file("res://scenes/endMenu.tscn")
