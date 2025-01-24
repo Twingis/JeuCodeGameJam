@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1x8cvm3pdc3u"]
+[gd_scene load_steps=6 format=3 uid="uid://b1x8cvm3pdc3u"]
 
-[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" path="res://scenes/player_body.tscn" id="1_7xsxc"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_huim7"]
-[ext_resource type="PackedScene" uid="uid://bjghmtlbft3j7" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
-[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_nbuby"]
-[ext_resource type="PackedScene" uid="uid://cf1x8gi22y46s" path="res://scenes/note.tscn" id="3_ml8fl"]
-[ext_resource type="PackedScene" uid="uid://ca3hdyi8s0ml3" path="res://scenes/tilemap2.tscn" id="6_tc65g"]
+[ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
+[ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="3_ml8fl"]
 
-[node name="game" type="Node"]
+[node name="game" type="Node2D"]
 script = ExtResource("1_huim7")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_7xsxc")]
@@ -18,16 +17,12 @@ scale = Vector2(0.994073, -0.741849)
 zoom = Vector2(4, 4)
 limit_bottom = 70
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D"]
-offset_left = -133.793
-offset_top = 84.9229
-offset_right = 3706.21
-offset_bottom = 578.923
-scale = Vector2(0.07, 0.05)
-max_value = 1000.0
-value = 1000.0
-texture_progress = ExtResource("4_7xt4y")
-script = ExtResource("4_x3bwy")
+[node name="HealthBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("2_8y7ab")]
+offset_left = -121.0
+offset_top = -81.0
+offset_right = -121.0
+offset_bottom = -81.0
+scale = Vector2(0.25, 0.15)
 
 [node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]
 
@@ -35,13 +30,4 @@ script = ExtResource("4_x3bwy")
 position = Vector2(153, 0)
 scale = Vector2(2, 2)
 
-[node name="Room1" type="Node2D" parent="."]
-
-[node name="TileMapCollision" parent="Room1" instance=ExtResource("2_nbuby")]
-
-[node name="Room2" type="Node2D" parent="."]
-
-[node name="TileMapCollision" parent="Room2" instance=ExtResource("6_tc65g")]
-
-[connection signal="zéro" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
