@@ -76,7 +76,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
-text = "Master Volume"
+text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -101,7 +101,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
-text = "Music Volume"
+text = "Music"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -126,7 +126,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
-text = "SFX Volume"
+text = "SFX"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -162,9 +162,7 @@ flat = true
 clip_text = true
 icon_alignment = 1
 
-[node name="hoverSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(476, 576)
+[node name="hoverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_15l18")
-bus = &"SFX"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
