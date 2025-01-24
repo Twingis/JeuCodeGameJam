@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://cw11vwjc66wto"]
+[gd_scene load_steps=9 format=4 uid="uid://cw11vwjc66wto"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_hm3km"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
 [ext_resource type="Script" path="res://scripts/change_scene.gd" id="6_er00s"]
+[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_np3ep"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wic8"]
@@ -70,6 +71,8 @@ id = 5
 position = Vector2(343, 0)
 scale = Vector2(2, 2)
 id = 6
+
+[node name="MusiqueJeu" parent="." instance=ExtResource("7_np3ep")]
 
 [connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
