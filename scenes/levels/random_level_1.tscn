@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://umjcj47snamt"]
+[gd_scene load_steps=17 format=4 uid="uid://umjcj47snamt"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_rbejo"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
 [ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
+[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
 [ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="5_hbp4r"]
 
@@ -622,3 +623,9 @@ region_rect = Rect2(234, 126, 18, 14)
 
 [node name="Area2D" parent="." instance=ExtResource("5_hbp4r")]
 position = Vector2(351, -244)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
+offset_left = 37.0
+offset_right = 9303.0

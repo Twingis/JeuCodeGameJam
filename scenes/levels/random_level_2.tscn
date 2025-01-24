@@ -1,11 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://dfq3f0satnijp"]
+[gd_scene load_steps=17 format=4 uid="uid://dkurt6hd2mxyj"]
 
-[ext_resource type="Script" path="res://scripts/random_level_1.gd" id="1_3wbpv"]
+[ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
-[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/tiles/tilemap_packed.png" id="3_vfrxm"]
-[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/tiles/tilemap-backgrounds_packed.png" id="4_fxchm"]
+[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="3_vfrxm"]
+[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="4_fxchm"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="5_75nji"]
-[ext_resource type="PackedScene" uid="uid://cdjtqfvn4prbs" path="res://scenes/gateway.tscn" id="6_r02hc"]
+[ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="6_r02hc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -499,7 +499,7 @@ size = Vector2(18, 4)
 size = Vector2(36, 4)
 
 [node name="RandomLevel1" type="Node2D"]
-script = ExtResource("1_3wbpv")
+script = ExtResource("1_vjpmb")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_wxjrb")]
 position = Vector2(36, -12)
@@ -631,4 +631,3 @@ offset_bottom = 505.0
 
 [node name="gateway" parent="." instance=ExtResource("6_r02hc")]
 position = Vector2(351, -244)
-current_level = 2
