@@ -1,5 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dbp8qt1aae6da"]
-[gd_scene load_steps=18 format=4 uid="uid://dkurt6hd2mxyj"]
+[gd_scene load_steps=18 format=4 uid="uid://dbp8qt1aae6da"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
@@ -8,9 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="5_75nji"]
 [ext_resource type="PackedScene" uid="uid://drs7b5jn6hse6" path="res://scenes/platforms/cloud_big.tscn" id="5_uyq5y"]
 [ext_resource type="PackedScene" uid="uid://d0pltjpgjwiy2" path="res://scenes/platforms/cloud_default.tscn" id="6_mjtqb"]
-[ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="6_r02hc"]
+[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="6_r02hc"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
-[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_ryv3l"]
 [ext_resource type="PackedScene" uid="uid://dsaoy2fasev17" path="res://scenes/platforms/feuilles.tscn" id="7_rdeyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
@@ -573,9 +571,4 @@ position = Vector2(81, -262)
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_7ab5g")]
 
-[node name="Note" parent="." instance=ExtResource("8_ryv3l")]
-position = Vector2(94, -34)
-scale = Vector2(2, 2)
-
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
-[connection signal="catch" from="Note" to="." method="_on_note_catch"]

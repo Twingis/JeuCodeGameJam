@@ -631,7 +631,6 @@ position = Vector2(351, -244)
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
 offset_left = 37.0
 offset_right = 9303.0
-value = 2000.0
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
 
