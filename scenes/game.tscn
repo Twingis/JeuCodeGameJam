@@ -21,6 +21,7 @@ offset_right = 144.0
 offset_bottom = -56.0
 
 [node name="TextureProgressBar2" type="TextureProgressBar" parent="CharacterBody2D/HealthBar"]
+layout_mode = 0
 offset_right = 96.0
 offset_bottom = 40.0
 max_value = 1000.0
