@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://b1x8cvm3pdc3u"]
+[gd_scene load_steps=8 format=4 uid="uid://cw11vwjc66wto"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm3km"]
-[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_shf4a"]
+[ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
-[ext_resource type="PackedScene" uid="uid://bjghmtlbft3j7" path="res://scenes/barre_de_vie.tscn" id="4_u2nxd"]
+[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
 [ext_resource type="Script" path="res://scripts/change_scene.gd" id="6_er00s"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wic8"]
 
@@ -22,12 +23,11 @@ scale = Vector2(0.994073, -0.741849)
 zoom = Vector2(4, 4)
 limit_bottom = 70
 
-[node name="HealthBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_u2nxd")]
-offset_left = -121.0
-offset_top = -81.0
-offset_right = -121.0
-offset_bottom = -81.0
-scale = Vector2(0.25, 0.15)
+[node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_hv0jm")]
+offset_left = -143.853
+offset_top = 80.879
+offset_right = 3696.15
+offset_bottom = 574.879
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("6_er00s")
@@ -36,5 +36,11 @@ script = ExtResource("6_er00s")
 position = Vector2(422, -12)
 shape = SubResource("RectangleShape2D_5wic8")
 
+[node name="Note" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(153, 0)
+scale = Vector2(2, 2)
+
+[connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="catch" from="Note" to="." method="_on_note_catch"]

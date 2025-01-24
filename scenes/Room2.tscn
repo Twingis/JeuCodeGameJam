@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://686ye7gcqqog"]
+[gd_scene load_steps=6 format=3 uid="uid://ce40a1umwswsf"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mbhsq"]
-[ext_resource type="PackedScene" uid="uid://dnls8prj1vaxm" path="res://scenes/tilemap2.tscn" id="2_pfqsm"]
+[ext_resource type="PackedScene" path="res://scenes/tilemap2.tscn" id="2_pfqsm"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_facok"]
-[ext_resource type="PackedScene" uid="uid://bjghmtlbft3j7" path="res://scenes/barre_de_vie.tscn" id="4_lbcso"]
-[ext_resource type="PackedScene" uid="uid://cf1x8gi22y46s" path="res://scenes/note.tscn" id="5_ywel3"]
+[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_vpeia"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="5_ywel3"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_mbhsq")
@@ -19,15 +19,15 @@ scale = Vector2(0.994073, -0.741849)
 zoom = Vector2(4, 4)
 limit_bottom = 70
 
-[node name="HealthBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_lbcso")]
-offset_left = -121.0
-offset_top = -81.0
-offset_right = -121.0
-offset_bottom = -81.0
-scale = Vector2(0.25, 0.15)
+[node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_vpeia")]
+offset_left = -143.853
+offset_top = 80.879
+offset_right = 3696.15
+offset_bottom = 574.879
 
 [node name="Note" parent="." instance=ExtResource("5_ywel3")]
 position = Vector2(153, 0)
 scale = Vector2(2, 2)
 
+[connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
