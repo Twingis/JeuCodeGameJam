@@ -638,30 +638,23 @@ position = Vector2(351, -244)
 
 [node name="Note1" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(262, -144)
-script = null
 
 [node name="Note2" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(311, 0)
-script = null
 
 [node name="Note3" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(111, -234)
-script = null
 
 [node name="Note4" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(158, -145)
-script = null
 
 [node name="Note5" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(217, -216)
-script = null
 
 [node name="Note6" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(162, -54)
-script = null
 
 [node name="Note7" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(85, -34)
-script = null
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
