@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy1hyurl472aq"]
+
+[ext_resource type="Script" path="res://scripts/qte_manager.gd" id="1_86o8m"]
+
+[node name="QTEManager" type="Node2D"]
+script = ExtResource("1_86o8m")
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 37.0
+offset_right = 62.0
+offset_bottom = 60.0
+
+[node name="Retour" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 23.0
+offset_right = 126.0
+offset_bottom = 46.0
+
+[node name="QTETimer" type="Timer" parent="."]
+
+[node name="InstructionsImages" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 66.0
+offset_right = 77.0
+offset_bottom = 130.0
+scale = Vector2(0.5, 0.5)
+
+[connection signal="timeout" from="QTETimer" to="." method="_on_QTE_Timer_timeout"]

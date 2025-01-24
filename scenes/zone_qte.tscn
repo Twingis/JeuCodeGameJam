@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ewyq1vxhm2m6"]
+
+[ext_resource type="Script" path="res://scripts/zone_qte.gd" id="1_tg1ly"]
+[ext_resource type="PackedScene" uid="uid://dy1hyurl472aq" path="res://scenes/qte_manager.tscn" id="2_lpfou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbqt1"]
+size = Vector2(32, 37)
+
+[node name="ZoneQTE" type="Area2D"]
+script = ExtResource("1_tg1ly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -18)
+shape = SubResource("RectangleShape2D_dbqt1")
+
+[node name="QTEManager" parent="." instance=ExtResource("2_lpfou")]
+position = Vector2(16, -18)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
