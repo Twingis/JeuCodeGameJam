@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0v8d72cx4qox"]
+[gd_scene load_steps=8 format=3 uid="uid://b0v8d72cx4qox"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_6qb0s"]
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_pbwq0"]
 [ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="2_sxk5e"]
-[ext_resource type="FontFile" path="res://assets/BarreDeVie/Font/Kenney Future.ttf" id="3_2s35q"]
 [ext_resource type="Texture2D" uid="uid://m7xryapea2vp" path="res://assets/menu/PNG/Green/Default/button_rectangle_depth_gloss.png" id="4_3ro5e"]
 [ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="4_phbse"]
 [ext_resource type="PackedScene" uid="uid://dl8elg7yaxtm4" path="res://scenes/install_sounds.tscn" id="7_mu4xo"]
@@ -49,7 +48,6 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("3_2s35q")
 theme_override_font_sizes/font_size = 50
 text = "Symphonite 
 Adventure"
