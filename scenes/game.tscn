@@ -1,12 +1,22 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=8 format=3 uid="uid://b1x8cvm3pdc3u"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://o5lhsg8st537"]
+>>>>>>> Stashed changes
 
-[ext_resource type="PackedScene" uid="uid://dd5b12444d44d" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_huim7"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
 [ext_resource type="PackedScene" path="res://scenes/note.tscn" id="3_ml8fl"]
 [ext_resource type="Texture2D" uid="uid://t2li621awy16" path="res://assets/BarreDeVie/PNG/HealtBar.png" id="4_7xt4y"]
 [ext_resource type="Script" path="res://scripts/Vie.gd" id="4_x3bwy"]
+=======
+[ext_resource type="PackedScene" uid="uid://bjghmtlbft3j7" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
+[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_nbuby"]
+[ext_resource type="PackedScene" uid="uid://cf1x8gi22y46s" path="res://scenes/note.tscn" id="3_ml8fl"]
+>>>>>>> Stashed changes
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_huim7")
@@ -40,7 +50,8 @@ script = ExtResource("4_x3bwy")
 [node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]
 
 [node name="Note" parent="." instance=ExtResource("3_ml8fl")]
-position = Vector2(118, 122)
+position = Vector2(153, 0)
+scale = Vector2(2, 2)
 
 [connection signal="zéro" from="CharacterBody2D/Camera2D/HealthBar/TextureProgressBar2" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
