@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dddwf61sugs0x"]
+
+[ext_resource type="Script" path="res://barre_de_vie.gd" id="1_hd3xy"]
+[ext_resource type="Texture2D" uid="uid://tbibnl45rtb0" path="res://assets/BarreDeVie/PNG/Red/Default/bar_round_gloss_large.png" id="2_fbagp"]
+[ext_resource type="Texture2D" uid="uid://dcbf6sgrm4ukt" path="res://assets/BarreDeVie/PNG/Grey/Default/bar_round_gloss_large.png" id="3_wh0ug"]
+[ext_resource type="Script" path="res://Vie.gd" id="4_81utu"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hd3xy")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 40.0
+max_value = 1000.0
+value = 100.0
+texture_under = ExtResource("2_fbagp")
+texture_progress = ExtResource("3_wh0ug")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+script = ExtResource("4_81utu")
