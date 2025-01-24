@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://o5lhsg8st537"]
 
-[ext_resource type="PackedScene" uid="uid://cqeioj7ely0qj" path="res://scenes/level_1.tscn" id="1_1bxib"]
-[ext_resource type="PackedScene" uid="uid://bgcf6k211ip57" path="res://scenes/player.tscn" id="2_ojhgj"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_nbuby"]
 
 [node name="game" type="Node2D"]
 
-[node name="level1" parent="." instance=ExtResource("1_1bxib")]
-
-[node name="player" parent="." instance=ExtResource("2_ojhgj")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_7xsxc")]
 position = Vector2(26, -12)
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
+
+[node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]

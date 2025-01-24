@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cqeioj7ely0qj"]
+[gd_scene load_steps=6 format=4 uid="uid://c04opd32mw8dt"]
 
-[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="1_88jab"]
+[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="1_o8gsb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ak0la"]
-texture = ExtResource("1_88jab")
+texture = ExtResource("1_o8gsb")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
@@ -258,7 +258,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ak0la")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_goo8a"]
-texture = ExtResource("1_88jab")
+texture = ExtResource("1_o8gsb")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 1:0/0 = 0
@@ -445,13 +445,11 @@ texture_region_size = Vector2i(18, 18)
 tile_size = Vector2i(18, 18)
 sources/1 = SubResource("TileSetAtlasSource_goo8a")
 
-[node name="level1" type="Node2D"]
-
-[node name="TileMapCollision" type="TileMapLayer" parent="."]
+[node name="TileMapCollision" type="TileMapLayer"]
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAAFAAAAAAACAAAAAAAGAAAAAAACAAAAAAAHAAAAAAACAAAAAAADAAAAAAACAAAAAAAEAAAAAAACAAAAAAAIAAAAAAACAAAAAAAJAAAAAAACAAAAAAAKAAAAAAACAAAAAAALAAAAAAACAAAAAAAMAAAAAAADAAAAAAANAAAAAAAGAAcAAAAOAAAAAAAGAAcAAAAPAAAAAAAGAAcAAAAQAAAAAAABAAAAAAARAAAAAAACAAAAAAASAAAAAAACAAAAAAATAAAAAAACAAAAAAAUAAAAAAACAAAAAAAVAAAAAAACAAAAAAAWAAAAAAACAAAAAAAXAAAAAAACAAAAAAAYAAAAAAACAAAAAAAZAAAAAAADAAAAAAA=")
 tile_set = SubResource("TileSet_7tdu1")
 
-[node name="TileMapBackground" type="TileMapLayer" parent="TileMapCollision"]
+[node name="TileMapBackground" type="TileMapLayer" parent="."]
 z_index = -1
 tile_map_data = PackedByteArray("AAAFAP//AQARAAYAAAAFAP7/AQAQAAUAAAAFAP3/AQAQAAQAAAAEAPr/AQARAAAAAAAEAPv/AQATAAAAAAAEAPz/AQATAAIAAAAFAPr/AQASAAAAAAAFAPv/AQASAAEAAAAFAPz/AQASAAIAAAAGAPr/AQATAAAAAAAGAPv/AQATAAEAAAAGAPz/AQARAAMAAAADAPz/AQARAAIAAAADAPv/AQARAAAAAAAHAPz/AQATAAMAAAAHAP//AQAFAAYAAAARAP//AQAFAAYAAAAUAP//AQAFAAYAAAASAP//AQAEAAYAAAAJAP//AQAEAAYAAAAGAP//AQAEAAYAAAADAP//AQAEAAYAAAAYAP7/AQALAAUAAAAYAP//AQALAAYAAAABAP//AQAIAAQAAAA=")
 tile_set = SubResource("TileSet_mudtt")
