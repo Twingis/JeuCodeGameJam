@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
-[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_hbp4r"]
+[ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="5_hbp4r"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
@@ -499,7 +499,7 @@ size = Vector2(18, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euwb2"]
 size = Vector2(36, 4)
 
-[node name="RandomLevel1" type="Node2D"]
+[node name="RandomLevel2" type="Node2D"]
 script = ExtResource("1_rbejo")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_yloam")]
