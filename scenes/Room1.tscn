@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://cw11vwjc66wto"]
+[gd_scene load_steps=10 format=4 uid="uid://cw11vwjc66wto"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm3km"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
+[ext_resource type="Texture2D" uid="uid://q3nhef2pmx7s" path="res://assets/BarreDeVie/PNG/HealtBarInversé.png" id="5_8uc0k"]
 [ext_resource type="Script" path="res://scripts/change_scene.gd" id="6_er00s"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_np3ep"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
@@ -25,10 +26,13 @@ zoom = Vector2(4, 4)
 limit_bottom = 70
 
 [node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_hv0jm")]
-offset_left = -143.853
-offset_top = 80.879
-offset_right = 3696.15
-offset_bottom = 574.879
+offset_left = -121.721
+offset_top = 87.6189
+offset_right = 3718.28
+offset_bottom = 585.619
+rotation = 0.00115235
+size_flags_horizontal = 4
+texture_progress = ExtResource("5_8uc0k")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("6_er00s")
@@ -43,7 +47,6 @@ scale = Vector2(2, 2)
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_np3ep")]
 
-[connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
