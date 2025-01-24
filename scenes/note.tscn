@@ -22,17 +22,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mywrm"]
-radius = 64.0
-height = 158.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajoq0"]
+radius = 6.0
+height = 14.0
 
-[node name="Note" type="RigidBody2D"]
+[node name="Note" type="Area2D"]
 position = Vector2(3, 145)
-gravity_scale = 0.0
 script = ExtResource("1_v3nb4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-50, -133)
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_mumgc")
 animation = &"note"
 frame_progress = 0.268001
@@ -40,12 +41,12 @@ centered = false
 offset = Vector2(50, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(64, -65)
-shape = SubResource("CapsuleShape2D_mywrm")
+position = Vector2(-39, -127)
+shape = SubResource("CapsuleShape2D_ajoq0")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(63, -72.75)
-scale = Vector2(6.5, 7.175)
+position = Vector2(-39, -127)
+scale = Vector2(0.625, 0.65)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

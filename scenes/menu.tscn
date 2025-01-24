@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4bd7875moa86"]
+[gd_scene load_steps=6 format=3 uid="uid://b0v8d72cx4qox"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_6qb0s"]
+[ext_resource type="Texture2D" uid="uid://dmxqnkkw0u4jh" path="res://assets/menu/wallpaper.jpg" id="2_stmh4"]
+[ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="2_sxk5e"]
+[ext_resource type="Texture2D" uid="uid://m7xryapea2vp" path="res://assets/menu/PNG/Green/Default/button_rectangle_depth_gloss.png" id="4_3ro5e"]
+[ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="4_phbse"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,25 +16,109 @@ grow_vertical = 2
 script = ExtResource("1_6qb0s")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_stmh4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(2.11775e-06, 0.909324, 0.479436, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.051971, 0.051971, 0.051971, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_sxk5e")
+theme_override_font_sizes/font_size = 50
+text = "Symphonite 
+Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Play"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_fonts/font = ExtResource("2_sxk5e")
+theme_override_font_sizes/font_size = 16
+text = "Start game"
+icon = ExtResource("4_3ro5e")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("2_sxk5e")
+text = "Tutorial"
+icon = ExtResource("4_phbse")
+flat = true
+clip_text = true
+icon_alignment = 1
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("2_sxk5e")
 text = "Options"
+icon = ExtResource("4_phbse")
+flat = true
+clip_text = true
+icon_alignment = 1
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_fonts/font = ExtResource("2_sxk5e")
 text = "Quit"
+icon = ExtResource("4_phbse")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
