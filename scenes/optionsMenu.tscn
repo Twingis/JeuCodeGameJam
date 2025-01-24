@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_8d16d"]
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_661gp"]
-[ext_resource type="FontFile" uid="uid://de4siaxpj16sx" path="res://assets/BarreDeVie/Font/Kenney Future.ttf" id="3_ybbf1"]
+[ext_resource type="FontFile" path="res://assets/BarreDeVie/Font/Kenney Future.ttf" id="3_ybbf1"]
 [ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="4_bpahg"]
 [ext_resource type="Script" path="res://scripts/volume_slider.gd" id="4_toa75"]
 [ext_resource type="Script" path="res://scripts/volume_slider_2.gd" id="5_6c1pl"]

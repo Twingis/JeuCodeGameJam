@@ -1,18 +1,18 @@
-[gd_scene load_steps=18 format=4 uid="uid://umjcj47snamt"]
+[gd_scene load_steps=18 format=4 uid="uid://dbp8qt1aae6da"]
 
-[ext_resource type="Script" path="res://scripts/room1.gd" id="1_rbejo"]
-[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
-[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
-[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
-[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
-[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_hbp4r"]
-[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
+[ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
+[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="3_vfrxm"]
+[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="4_fxchm"]
+[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="5_75nji"]
+[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="6_r02hc"]
+[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1thby"]
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
@@ -271,7 +271,7 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_1thby")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3h37"]
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 1:0/0 = 0
@@ -459,7 +459,7 @@ tile_size = Vector2i(18, 18)
 sources/1 = SubResource("TileSetAtlasSource_b3h37")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xcsb"]
-texture = ExtResource("3_53x1c")
+texture = ExtResource("4_fxchm")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 1:0/0 = 0
@@ -500,10 +500,10 @@ size = Vector2(18, 4)
 size = Vector2(36, 4)
 
 [node name="RandomLevel1" type="Node2D"]
-script = ExtResource("1_rbejo")
+script = ExtResource("1_vjpmb")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_yloam")]
-position = Vector2(37, -12)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_wxjrb")]
+position = Vector2(36, -12)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 12)
@@ -549,7 +549,7 @@ position = Vector2(117, -226)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/cloud_big"]
 z_index = -1
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 54, 15)
 
@@ -564,7 +564,7 @@ position = Vector2(81, -228)
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/cloud_small"]
 z_index = -1
 position = Vector2(0, -1)
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(288, 126, 18, 9)
 
@@ -580,7 +580,7 @@ position = Vector2(54, -191)
 [node name="Sprite2D_left" type="Sprite2D" parent="Platforms/cloud_default"]
 z_index = -1
 position = Vector2(-9, 0)
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 18, 14)
 
@@ -594,7 +594,7 @@ one_way_collision = true
 z_index = -1
 position = Vector2(9, 0)
 scale = Vector2(-1, 1)
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 18, 14)
 
@@ -604,7 +604,7 @@ position = Vector2(216, -209)
 [node name="Sprite2D_left" type="Sprite2D" parent="Platforms/cloud_default2"]
 z_index = -1
 position = Vector2(-9, 0)
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 18, 14)
 
@@ -618,19 +618,21 @@ one_way_collision = true
 z_index = -1
 position = Vector2(9, 0)
 scale = Vector2(-1, 1)
-texture = ExtResource("2_35r11")
+texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 18, 14)
 
-[node name="Area2D" parent="." instance=ExtResource("5_hbp4r")]
-position = Vector2(351, -244)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
-offset_left = 37.0
-offset_right = 9303.0
+[node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_75nji")]
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 3852.0
+offset_bottom = 505.0
 
-[node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
+[node name="gateway" parent="." instance=ExtResource("6_r02hc")]
+position = Vector2(351, -244)
 
-[connection signal="zero" from="CanvasLayer/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
+[node name="MusiqueJeu" parent="." instance=ExtResource("7_7ab5g")]
+
+[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]

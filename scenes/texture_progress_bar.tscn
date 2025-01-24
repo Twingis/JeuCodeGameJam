@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://5oi56ip58rn8"]
 
-[ext_resource type="Texture2D" uid="uid://t2li621awy16" path="res://assets/BarreDeVie/PNG/HealtBar.png" id="1_8bdpi"]
+[ext_resource type="Texture2D" uid="uid://dsyhnutr7vcsl" path="res://assets/BarreDeVie/PNG/life_barre.png" id="1_7wx4e"]
 [ext_resource type="Script" path="res://scripts/texture_progress_bar.gd" id="1_vvwsb"]
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.06, 0.043)
+offset_right = 9266.0
+offset_bottom = 1670.0
+scale = Vector2(0.03, 0.024)
 max_value = 1000.0
 value = 1000.0
-texture_progress = ExtResource("1_8bdpi")
+texture_progress = ExtResource("1_7wx4e")
 script = ExtResource("1_vvwsb")

@@ -4,10 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
-[ext_resource type="Script" path="res://scripts/change_scene.gd" id="6_er00s"]
+[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_eb1nv"]
+[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_np3ep"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wic8"]
 
 [node name="Room1" type="Node2D"]
 script = ExtResource("1_hm3km")
@@ -24,18 +23,12 @@ zoom = Vector2(4, 4)
 limit_bottom = 70
 
 [node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_hv0jm")]
-offset_left = -143.853
-offset_top = 80.879
-offset_right = 3696.15
-offset_bottom = 574.879
-scale = Vector2(0.07, 0.05)
+offset_left = -138.823
+offset_top = 71.4431
+offset_right = 9593.18
+offset_bottom = 1741.44
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("6_er00s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(422, -12)
-shape = SubResource("RectangleShape2D_5wic8")
+[node name="Area2D" parent="." instance=ExtResource("5_eb1nv")]
 
 [node name="Note1" parent="." instance=ExtResource("7_qwh6i")]
 position = Vector2(117, 1)
@@ -84,6 +77,10 @@ offset_bottom = -35.0
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="catch" from="Note1" to="." method="_on_note_catch"]
+[node name="MusiqueJeu" parent="." instance=ExtResource("7_np3ep")]
+
+[connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
+[connection signal="catch" from="Note" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note2" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note3" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note4" to="." method="_on_note_catch"]
