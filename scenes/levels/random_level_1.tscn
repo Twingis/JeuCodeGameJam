@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=4 uid="uid://umjcj47snamt"]
 
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
-[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/tilemap/tilemap_packed.png" id="2_35r11"]
-[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/tilemap/tilemap-backgrounds_packed.png" id="3_53x1c"]
+[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
+[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -497,9 +497,8 @@ size = Vector2(36, 4)
 
 [node name="RandomLevel1" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("spawn") instance=ExtResource("1_yloam")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_yloam")]
 position = Vector2(56, -18)
-spawn = NodePath("../playerSpawn")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 12)
