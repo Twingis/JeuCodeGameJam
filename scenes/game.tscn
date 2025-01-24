@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1x8cvm3pdc3u"]
+[gd_scene load_steps=4 format=3 uid="uid://o5lhsg8st537"]
 
-[ext_resource type="PackedScene" uid="uid://dd5b12444d44d" path="res://scenes/player_body.tscn" id="1_7xsxc"]
-[ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
-[ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
-[ext_resource type="Texture2D" uid="uid://dcbf6sgrm4ukt" path="res://assets/BarreDeVie/PNG/Grey/Default/bar_round_gloss_large.png" id="3_yq7kb"]
-[ext_resource type="Script" path="res://scripts/Vie.gd" id="4_x3bwy"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_nbuby"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="3_ml8fl"]
 
 [node name="game" type="Node2D"]
 
@@ -13,21 +11,6 @@ position = Vector2(26, -12)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
-
-[node name="HealthBar" parent="CharacterBody2D" instance=ExtResource("2_8y7ab")]
-offset_left = -143.0
-offset_top = -80.0
-offset_right = 144.0
-offset_bottom = -56.0
-
-[node name="TextureProgressBar2" type="TextureProgressBar" parent="CharacterBody2D/HealthBar"]
-layout_mode = 0
-offset_right = 96.0
-offset_bottom = 40.0
-max_value = 1000.0
-value = 1000.0
-texture_progress = ExtResource("3_yq7kb")
-script = ExtResource("4_x3bwy")
 
 [node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]
 
