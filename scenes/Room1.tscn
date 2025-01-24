@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://cw11vwjc66wto"]
+[gd_scene load_steps=7 format=4 uid="uid://d4aqgcxqrs4eo"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_hm3km"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
-[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
+[ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="4_u2nxd"]
 [ext_resource type="Script" path="res://scripts/change_scene.gd" id="6_er00s"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
 
