@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b1x8cvm3pdc3u"]
 
-[ext_resource type="PackedScene" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_huim7"]
 [ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
