@@ -11,7 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	value -= 1*vitesse
 	if value==0:
-		print(value)
 		emit_signal("zéro")
 
 func add(soin):
