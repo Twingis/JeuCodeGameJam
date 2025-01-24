@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://c04opd32mw8dt"]
+[gd_scene load_steps=11 format=4 uid="uid://ca3hdyi8s0ml3"]
 
-[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="1_o8gsb"]
-[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="2_7n2as"]
-[ext_resource type="Script" path="res://scripts/change_scene_area.gd" id="3_jgmkq"]
-[ext_resource type="PackedScene" uid="uid://ca3hdyi8s0ml3" path="res://scenes/tilemap2.tscn" id="4_l8mse"]
+[ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="1_agxmy"]
+[ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="2_dvaaj"]
+[ext_resource type="Script" path="res://scripts/change_scene_area.gd" id="3_x40wf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ak0la"]
-texture = ExtResource("1_o8gsb")
+texture = ExtResource("1_agxmy")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
@@ -261,7 +260,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ak0la")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_goo8a"]
-texture = ExtResource("1_o8gsb")
+texture = ExtResource("1_agxmy")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 1:0/0 = 0
@@ -449,7 +448,7 @@ tile_size = Vector2i(18, 18)
 sources/1 = SubResource("TileSetAtlasSource_goo8a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aj6dr"]
-texture = ExtResource("2_7n2as")
+texture = ExtResource("2_dvaaj")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 1:0/0 = 0
@@ -525,8 +524,7 @@ tile_set = SubResource("TileSet_fg48t")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(168, -14)
-script = ExtResource("3_jgmkq")
-scene = ExtResource("4_l8mse")
+script = ExtResource("3_x40wf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(3, 5)
