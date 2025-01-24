@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp1jdebe22awk"]
+[gd_scene load_steps=7 format=3 uid="uid://bm6khp0f6elgj"]
 
 [ext_resource type="Script" path="res://scenes/end_menu.gd" id="1_iq2oi"]
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_tv6uc"]
@@ -69,7 +69,6 @@ text = "Score :"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_f3kw1")
 theme_override_font_sizes/font_size = 30
-text = "67890"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
