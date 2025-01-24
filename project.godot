@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 "<<<<<<<HEAD[dotnet]project/assembly_name"="JeuCodeGameJam"
 
+[autoload]
+
+Score="*res://scripts/score.gd"
+
 [dotnet]
 
 project/assembly_name="JeuCodeGameJam"
