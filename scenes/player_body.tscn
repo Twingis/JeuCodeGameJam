@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6lcpc"]
 [ext_resource type="Texture2D" uid="uid://b5cxkyg1r6bp4" path="res://assets/menu/tilemap-characters_packed.png" id="2_31o88"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yp7o8"]
-radius = 7.0
-height = 24.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgooc"]
+size = Vector2(16, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65g3b"]
 atlas = ExtResource("2_31o88")
@@ -51,10 +50,12 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, -12)
+collision_layer = 3
 script = ExtResource("1_6lcpc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_yp7o8")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_pgooc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ch32k")
