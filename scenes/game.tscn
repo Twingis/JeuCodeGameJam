@@ -23,3 +23,4 @@ scale = Vector2(0.25, 0.15)
 [node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]
 
 [node name="Note" parent="." instance=ExtResource("3_ml8fl")]
+position = Vector2(118, 122)
