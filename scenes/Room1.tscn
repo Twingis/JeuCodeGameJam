@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://cw11vwjc66wto"]
+[gd_scene load_steps=9 format=4 uid="uid://cw11vwjc66wto"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_hm3km"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
 [ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_eb1nv"]
-[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_np3ep"]
+[ext_resource type="Texture2D" uid="uid://t2li621awy16" path="res://assets/BarreDeVie/PNG/HealtBar.png" id="5_jxir1"]
+[ext_resource type="PackedScene" path="res://scenes/musique_jeu.tscn" id="7_np3ep"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_qwh6i"]
 
 [node name="Room1" type="Node2D"]
@@ -27,10 +28,12 @@ offset_left = -138.823
 offset_top = 71.4431
 offset_right = 9593.18
 offset_bottom = 1741.44
+scale = Vector2(0.06, 0.043)
+texture_progress = ExtResource("5_jxir1")
 
 [node name="Area2D" parent="." instance=ExtResource("5_eb1nv")]
 
-[node name="Note" parent="." instance=ExtResource("7_qwh6i")]
+[node name="Note1" parent="." instance=ExtResource("7_qwh6i")]
 position = Vector2(117, 1)
 scale = Vector2(2, 2)
 
@@ -64,10 +67,19 @@ position = Vector2(343, 0)
 scale = Vector2(2, 2)
 id = 6
 
+[node name="Label" type="Label" parent="."]
+offset_left = 384.0
+offset_top = -58.0
+offset_right = 424.0
+offset_bottom = -35.0
+
+[node name="Timer" type="Timer" parent="."]
+
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_np3ep")]
 
 [connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
-[connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="catch" from="Note1" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note2" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note3" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note4" to="." method="_on_note_catch"]

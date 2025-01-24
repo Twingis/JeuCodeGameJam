@@ -1,7 +1,7 @@
 extends Control
 
 func _on_play_pressed() -> void:
-	var rand_room_num = randi_range(1,2)
+	var rand_room_num = randi_range(1,3)
 	var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
 	get_tree().change_scene_to_file(path)
 

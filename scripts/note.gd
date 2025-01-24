@@ -20,6 +20,8 @@ func _ready() -> void:
 	sound = sounds[id]
 	$AudioStreamPlayer.stream = sound
  
+func playNote():
+	$AudioStreamPlayer.play()
 
 
 func _on_body_entered(body: Node2D) -> void:
