@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp1jdebe22awk"]
+[gd_scene load_steps=9 format=3 uid="uid://bm6khp0f6elgj"]
 
 [ext_resource type="Script" path="res://scripts/end_menu.gd" id="1_rgc06"]
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_tv6uc"]
 [ext_resource type="FontFile" uid="uid://de4siaxpj16sx" path="res://assets/BarreDeVie/Font/Kenney Future.ttf" id="3_1cvv2"]
 [ext_resource type="Texture2D" uid="uid://eela8oyl1nph" path="res://assets/menu/PNG/Red/Default/button_rectangle_depth_gloss.png" id="4_341hj"]
 [ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="4_f3kw1"]
+[ext_resource type="Script" path="res://scripts/score_number.gd" id="5_ws18m"]
 [ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="6_eftrv"]
-[ext_resource type="PackedScene" uid="uid://dl8elg7yaxtm4" path="res://scenes/install_sounds.tscn" id="7_b01v2"]
+[ext_resource type="PackedScene" path="res://scenes/install_sounds.tscn" id="7_b01v2"]
 
 [node name="endMenu" type="Control"]
 layout_mode = 3
@@ -70,6 +71,7 @@ text = "Score :"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_f3kw1")
 theme_override_font_sizes/font_size = 30
+script = ExtResource("5_ws18m")
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
