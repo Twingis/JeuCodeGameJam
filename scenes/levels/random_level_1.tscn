@@ -500,7 +500,7 @@ size = Vector2(18, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euwb2"]
 size = Vector2(36, 4)
 
-[node name="RandomLevel1" type="Node2D"]
+[node name="RandomLevel2" type="Node2D"]
 script = ExtResource("1_rbejo")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_yloam")]
