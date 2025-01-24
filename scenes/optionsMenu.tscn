@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/volume_slider_2.gd" id="5_6c1pl"]
 [ext_resource type="Script" path="res://scripts/volume_slider_3.gd" id="6_3bwsw"]
 [ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="6_b4yto"]
-[ext_resource type="AudioStream" uid="uid://3ebr8vt3dyxo" path="res://assets/menu/Sounds/tap-a.ogg" id="7_15l18"]
+[ext_resource type="PackedScene" uid="uid://dl8elg7yaxtm4" path="res://scenes/install_sounds.tscn" id="11_ilbkj"]
 
 [node name="optionsMenu" type="Control"]
 layout_mode = 3
@@ -64,6 +64,7 @@ size_flags_stretch_ratio = 0.3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Master" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -77,7 +78,6 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
 text = "Master Volume"
-horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
 
@@ -102,7 +102,6 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
 text = "Music Volume"
-horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
 
@@ -127,7 +126,6 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ybbf1")
 theme_override_font_sizes/font_size = 30
 text = "SFX Volume"
-horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
 
@@ -147,6 +145,7 @@ size_flags_vertical = 3
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -162,9 +161,11 @@ flat = true
 clip_text = true
 icon_alignment = 1
 
-[node name="hoverSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(476, 576)
-stream = ExtResource("7_15l18")
-bus = &"SFX"
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InstallSounds" parent="." instance=ExtResource("11_ilbkj")]
+root_path = NodePath("..")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
