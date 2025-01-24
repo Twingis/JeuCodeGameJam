@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://o5lhsg8st537"]
+[gd_scene load_steps=6 format=3 uid="uid://b1x8cvm3pdc3u"]
 
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_7xsxc"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_huim7"]
-[ext_resource type="PackedScene" uid="uid://bjghmtlbft3j7" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
-[ext_resource type="PackedScene" uid="uid://c04opd32mw8dt" path="res://scenes/tilemap.tscn" id="2_nbuby"]
-[ext_resource type="PackedScene" uid="uid://cf1x8gi22y46s" path="res://scenes/note.tscn" id="3_ml8fl"]
+[ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
+[ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="3_ml8fl"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_huim7")
