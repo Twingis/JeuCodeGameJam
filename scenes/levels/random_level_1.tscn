@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://umjcj47snamt"]
+[gd_scene load_steps=19 format=4 uid="uid://umjcj47snamt"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_rbejo"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
 [ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_hbp4r"]
-[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
+[ext_resource type="PackedScene" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_8ll3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -627,10 +628,51 @@ position = Vector2(351, -244)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
+[node name="healthBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
 offset_left = 37.0
 offset_right = 9303.0
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
 
-[connection signal="zero" from="CanvasLayer/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
+[node name="Note1" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(262, -144)
+
+[node name="Note2" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(311, 0)
+id = 1
+
+[node name="Note3" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(111, -234)
+id = 2
+
+[node name="Note4" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(158, -145)
+id = 3
+
+[node name="Note5" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(217, -216)
+id = 4
+
+[node name="Note6" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(162, -54)
+id = 5
+
+[node name="Note7" parent="." instance=ExtResource("8_8ll3i")]
+position = Vector2(85, -34)
+id = 6
+
+[node name="Label" type="Label" parent="."]
+offset_left = 282.0
+offset_top = -286.0
+offset_right = 322.0
+offset_bottom = -263.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
+[connection signal="catch" from="Note1" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note2" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note3" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note4" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note5" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note6" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note7" to="." method="_on_note_catch"]
