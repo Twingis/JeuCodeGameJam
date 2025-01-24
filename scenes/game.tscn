@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1x8cvm3pdc3u"]
+[gd_scene load_steps=7 format=3 uid="uid://b1x8cvm3pdc3u"]
 
-[ext_resource type="PackedScene" path="res://scenes/player_body.tscn" id="1_7xsxc"]
+[ext_resource type="PackedScene" uid="uid://dd5b12444d44d" path="res://scenes/player_body.tscn" id="1_7xsxc"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_huim7"]
-[ext_resource type="PackedScene" uid="uid://dddwf61sugs0x" path="res://scenes/barre_de_vie.tscn" id="2_8y7ab"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_nbuby"]
-[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="3_ml8fl"]
+[ext_resource type="PackedScene" path="res://scenes/note.tscn" id="3_ml8fl"]
+[ext_resource type="Texture2D" uid="uid://t2li621awy16" path="res://assets/BarreDeVie/PNG/HealtBar.png" id="4_7xt4y"]
+[ext_resource type="Script" path="res://scripts/Vie.gd" id="4_x3bwy"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_huim7")
@@ -17,12 +18,16 @@ scale = Vector2(0.994073, -0.741849)
 zoom = Vector2(4, 4)
 limit_bottom = 70
 
-[node name="HealthBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("2_8y7ab")]
-offset_left = -121.0
-offset_top = -81.0
-offset_right = -121.0
-offset_bottom = -81.0
-scale = Vector2(0.25, 0.15)
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D"]
+offset_left = -133.793
+offset_top = 84.9229
+offset_right = 3706.21
+offset_bottom = 578.923
+scale = Vector2(0.07, 0.05)
+max_value = 1000.0
+value = 1000.0
+texture_progress = ExtResource("4_7xt4y")
+script = ExtResource("4_x3bwy")
 
 [node name="TileMapCollision" parent="." instance=ExtResource("2_nbuby")]
 
@@ -30,4 +35,5 @@ scale = Vector2(0.25, 0.15)
 position = Vector2(153, 0)
 scale = Vector2(2, 2)
 
+[connection signal="zéro" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]

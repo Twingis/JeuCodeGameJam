@@ -1,7 +1,7 @@
 extends TextureProgressBar
 
-var vitesse = 1
 signal zéro
+var vitesse = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,8 +13,8 @@ func _process(delta: float) -> void:
 	if value==0:
 		emit_signal("zéro")
 
-func updateVitesse():
-	vitesse+=1
-
 func add(soin):
 	value+=soin
+
+func updateVitesse():
+	vitesse+=1
