@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 
 
 func _on_note_catch(note : Area2D) -> void:
-	var healthBar = get_node("CharacterBody2D/Camera2D/TextureProgressBar")
+	var healthBar = get_node("CanvasLayer/healthBar")
 	notes_ramasses.append(note)
 	healthBar.soigner(100)
 
