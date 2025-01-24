@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm6khp0f6elgj"]
+[gd_scene load_steps=7 format=3 uid="uid://cp1jdebe22awk"]
 
-[ext_resource type="Script" path="res://scenes/end_menu.gd" id="1_iq2oi"]
+[ext_resource type="Script" path="res://scripts/end_menu.gd" id="1_rgc06"]
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_tv6uc"]
 [ext_resource type="FontFile" uid="uid://de4siaxpj16sx" path="res://assets/BarreDeVie/Font/Kenney Future.ttf" id="3_1cvv2"]
 [ext_resource type="Texture2D" uid="uid://eela8oyl1nph" path="res://assets/menu/PNG/Red/Default/button_rectangle_depth_gloss.png" id="4_341hj"]
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iq2oi")
+script = ExtResource("1_rgc06")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

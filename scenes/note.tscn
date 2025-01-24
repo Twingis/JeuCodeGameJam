@@ -1,21 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://xhgepoioqb6d"]
+[gd_scene load_steps=7 format=3 uid="uid://cf1x8gi22y46s"]
 
-[ext_resource type="Texture2D" uid="uid://dd78ltk2u3ep5" path="res://assets/SpritesNotes/sprites_note_1.png" id="1_0yd80"]
 [ext_resource type="Script" path="res://scripts/note.gd" id="1_v3nb4"]
-[ext_resource type="Texture2D" uid="uid://c4v8lxeknjeau" path="res://assets/SpritesNotes/sprites_note_2.png" id="2_pf5i6"]
-[ext_resource type="Texture2D" uid="uid://d2hfsjj5ejgk2" path="res://assets/SpritesNotes/sprites_note_3.png" id="3_2s45c"]
+[ext_resource type="Texture2D" uid="uid://t80nsmr8spk3" path="res://assets/SpritesNotes/note_spritesheet_0001.png" id="2_f2tho"]
+[ext_resource type="Texture2D" uid="uid://icckjfb22qsp" path="res://assets/SpritesNotes/note_spritesheet_0002.png" id="3_hesva"]
+[ext_resource type="Texture2D" uid="uid://civ7vsmp678o6" path="res://assets/SpritesNotes/note_spritesheet_0003.png" id="4_odwqc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mumgc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0yd80")
+"texture": ExtResource("2_f2tho")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_pf5i6")
+"texture": ExtResource("3_hesva")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_2s45c")
+"texture": ExtResource("4_odwqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hesva")
 }],
 "loop": true,
 "name": &"note",
@@ -23,29 +26,28 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajoq0"]
-radius = 6.0
-height = 14.0
+radius = 5.0
+height = 12.0
 
 [node name="Note" type="Area2D"]
-position = Vector2(3, 145)
+position = Vector2(4, 132)
 script = ExtResource("1_v3nb4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-50, -133)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-32.75, -13)
+scale = Vector2(0.555556, 0.541667)
 sprite_frames = SubResource("SpriteFrames_mumgc")
 animation = &"note"
-frame_progress = 0.268001
 centered = false
 offset = Vector2(50, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-39, -127)
+position = Vector2(0.25, -6.00003)
 shape = SubResource("CapsuleShape2D_ajoq0")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-39, -127)
+position = Vector2(0.25, -6.00003)
 scale = Vector2(0.625, 0.65)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
