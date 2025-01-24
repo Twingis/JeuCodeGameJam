@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce40a1umwswsf"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_mbhsq"]
+[ext_resource type="PackedScene" path="res://scenes/tilemap2.tscn" id="2_pfqsm"]
+[ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_facok"]
+[ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_vpeia"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="5_ywel3"]
+
+[node name="Room2" type="Node2D"]
+script = ExtResource("1_mbhsq")
+
+[node name="TileMapCollision2" parent="." instance=ExtResource("2_pfqsm")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_facok")]
+position = Vector2(26, -12)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+scale = Vector2(0.994073, -0.741849)
+zoom = Vector2(4, 4)
+limit_bottom = 70
+
+[node name="TextureProgressBar" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_vpeia")]
+offset_left = -143.853
+offset_top = 80.879
+offset_right = 3696.15
+offset_bottom = 574.879
+
+[node name="Note" parent="." instance=ExtResource("5_ywel3")]
+position = Vector2(153, 0)
+scale = Vector2(2, 2)
+
+[connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
+[connection signal="catch" from="Note" to="." method="_on_note_catch"]
