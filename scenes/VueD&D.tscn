@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://0t7lbqogugu0"]
+[gd_scene load_steps=6 format=3 uid="uid://0t7lbqogugu0"]
 
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="1_auv6r"]
 [ext_resource type="PackedScene" uid="uid://cg4grlbemoasp" path="res://scenes/DragAndDrop.tscn" id="1_nras2"]
+[ext_resource type="Script" path="res://scripts/vue_d&d.gd" id="1_rfwgc"]
 [ext_resource type="Texture2D" uid="uid://ckioo7vedpo3t" path="res://assets/dragAndDropInterface/backgroundNotesEmpty.png" id="2_28f0q"]
 [ext_resource type="Texture2D" uid="uid://gmrxl60dusf6" path="res://assets/dragAndDropInterface/spriteNote_sol.png" id="4_ky4xw"]
 
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rfwgc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
