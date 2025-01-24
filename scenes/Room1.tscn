@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://cw11vwjc66wto"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_hm3km"]
+[ext_resource type="Script" path="res://scripts/room1.gd" id="1_hm3km"]
 [ext_resource type="PackedScene" uid="uid://fnbq0viy5rnn" path="res://scenes/tilemap.tscn" id="2_shf4a"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="3_a058w"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="4_hv0jm"]
@@ -37,10 +37,46 @@ position = Vector2(422, -12)
 shape = SubResource("RectangleShape2D_5wic8")
 
 [node name="Note" parent="." instance=ExtResource("7_qwh6i")]
-position = Vector2(153, 0)
+position = Vector2(116, -1)
 scale = Vector2(2, 2)
+
+[node name="Note2" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(147, 1)
+scale = Vector2(2, 2)
+id = 1
+
+[node name="Note3" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(187, 1)
+scale = Vector2(2, 2)
+id = 2
+
+[node name="Note4" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(222, 1)
+scale = Vector2(2, 2)
+id = 3
+
+[node name="Note5" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(257, 0)
+scale = Vector2(2, 2)
+id = 4
+
+[node name="Note6" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(301, 0)
+scale = Vector2(2, 2)
+id = 5
+
+[node name="Note7" parent="." instance=ExtResource("7_qwh6i")]
+position = Vector2(343, 0)
+scale = Vector2(2, 2)
+id = 6
 
 [connection signal="zero" from="CharacterBody2D/Camera2D/TextureProgressBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note2" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note3" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note4" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note5" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note6" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note7" to="." method="_on_note_catch"]
