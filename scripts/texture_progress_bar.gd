@@ -2,13 +2,20 @@ extends TextureProgressBar
 signal zero
 
 @export var speed : int
+var active = false
+
+func _ready() -> void:
+	$Timer.start(6.5)  # Démarre le timer
+	await $Timer.timeout
+	active = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	value -= speed * delta
-	Score.addScore()
-	if value == 0:
-		zero.emit()
+	if active :
+		value -= speed * delta
+		Score.addScore()
+		if value == 0:
+			zero.emit()
 
 func updateVitesse(new_speed):
 	speed = new_speed

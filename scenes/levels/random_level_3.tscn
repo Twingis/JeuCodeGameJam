@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dtcurl14cn4ve"]
+[gd_scene load_steps=28 format=4 uid="uid://dtcurl14cn4ve"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_lv81k"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_w3yor"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="6_8dj3w"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_tbc8c"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="8_my5e5"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="11_3eqdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -830,6 +831,97 @@ _data = {
 "escalator_anim": SubResource("Animation_ks888")
 }
 
+[sub_resource type="Curve2D" id="Curve2D_clbhw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 350, -265, 5.33936, -63.4049, -5.33936, 63.4049, 87, -209, 0, -70.0791, 0, 70.0791, 327, -116, 0, 0, 0, 0, 105, -47)
+}
+point_count = 4
+
+[sub_resource type="Animation" id="Animation_ppexc"]
+resource_name = "new_animation"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2.06667, 3.63333, 5),
+"transitions": PackedFloat32Array(2.37841, 0.450625, 0.466517, 3.24901),
+"update": 0,
+"values": [0.0, 0.348148, 0.696296, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/cutscene camera:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody2D/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_qmnko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/cutscene camera:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody2D/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6omj"]
+_data = {
+"RESET": SubResource("Animation_qmnko"),
+"new_animation": SubResource("Animation_ppexc")
+}
+
 [node name="RandomLevel3" type="Node2D"]
 script = ExtResource("1_lv81k")
 
@@ -931,6 +1023,22 @@ offset_left = 282.0
 offset_top = -286.0
 offset_right = 322.0
 offset_bottom = -263.0
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_clbhw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(350, -265)
+rotation = 2.9318
+
+[node name="cutscene camera" type="Camera2D" parent="Path2D/PathFollow2D"]
+zoom = Vector2(5, 5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k6omj")
+}
+script = ExtResource("11_3eqdj")
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]

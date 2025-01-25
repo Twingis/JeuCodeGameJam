@@ -11,3 +11,5 @@ max_value = 2000.0
 value = 2000.0
 texture_progress = ExtResource("1_7wx4e")
 script = ExtResource("1_vvwsb")
+
+[node name="Timer" type="Timer" parent="."]
