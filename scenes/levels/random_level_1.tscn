@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="5_hbp4r"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_8ll3i"]
-[ext_resource type="PackedScene" path="res://label_portes.tscn" id="9_ci8s1"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="9_ci8s1"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="9_cr6n7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]

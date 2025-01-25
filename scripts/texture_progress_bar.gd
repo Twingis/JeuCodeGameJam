@@ -1,9 +1,8 @@
 extends TextureProgressBar
 signal zero
 
-var speed = 120
-
-var active = false
+var speed := 120
+var active := false
 
 func _ready() -> void:
 	$Timer.start(6.5)  # Démarre le timer
