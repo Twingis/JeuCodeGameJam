@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://8kjaaoov2pqr"]
+[gd_scene load_steps=23 format=4 uid="uid://8kjaaoov2pqr"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="5_75nji"]
 [ext_resource type="PackedScene" uid="uid://drs7b5jn6hse6" path="res://scenes/platforms/cloud_big.tscn" id="5_uyq5y"]
 [ext_resource type="PackedScene" uid="uid://d0pltjpgjwiy2" path="res://scenes/platforms/cloud_default.tscn" id="6_mjtqb"]
-[ext_resource type="PackedScene" uid="uid://badiwqddtcpu0" path="res://scenes/gateway.tscn" id="6_r02hc"]
+[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="6_r02hc"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
 [ext_resource type="PackedScene" uid="uid://dsaoy2fasev17" path="res://scenes/platforms/feuilles.tscn" id="7_rdeyh"]
+[ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_apt32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -716,6 +717,7 @@ tile_map_data = PackedByteArray("AAACAAAAAgACAAEAAAABAAAAAgACAAEAAAAAAAAAAgAEAAE
 tile_set = SubResource("TileSet_yhcno")
 
 [node name="front_ground" type="TileMapLayer" parent="TileMaps"]
+visible = false
 tile_map_data = PackedByteArray("AAALAP//AAAFAAEAAAALAP7/AAABAAYAAAALAP3/AAABAAEAAAAMAP3/AAACAAEAAAANAP3/AAACAAEAAAAOAP3/AAAFAAEAAAAPAP3/AAACAAYAAAAPAPz/AAACAAEAAAAQAPz/AAACAAEAAAARAPz/AAACAAEAAAASAPz/AAACAAEAAAATAPz/AAACAAEAAAAOAPz/AAABAAEAAAAUAPz/AAADAAEAAAAUAP3/AAADAAYAAAAUAP7/AAADAAYAAAAUAP//AAADAAYAAAAUAAAAAAADAAYAAAAUAAEAAAADAAYAAAALAAAAAAACAAYAAAALAAEAAAACAAYAAAAMAP7/AAACAAYAAAAMAP//AAACAAYAAAAMAAAAAAACAAYAAAAMAAEAAAACAAYAAAANAAEAAAACAAYAAAANAAAAAAACAAYAAAANAP//AAACAAYAAAANAP7/AAACAAYAAAAOAP//AAACAAYAAAAOAAAAAAACAAYAAAAOAAEAAAACAAYAAAAOAP7/AAACAAYAAAAPAAAAAAACAAYAAAAPAAEAAAACAAYAAAAPAP//AAACAAYAAAAPAP7/AAACAAYAAAAQAP3/AAACAAYAAAARAP3/AAACAAYAAAASAP3/AAACAAYAAAATAP3/AAACAAYAAAATAP7/AAACAAYAAAATAP//AAACAAYAAAATAAAAAAACAAYAAAATAAEAAAACAAYAAAASAAEAAAACAAYAAAARAAEAAAACAAYAAAARAAAAAAACAAYAAAARAP//AAACAAYAAAARAP7/AAACAAYAAAASAP7/AAACAAYAAAASAP//AAACAAYAAAASAAAAAAACAAYAAAAQAP7/AAACAAYAAAAQAP//AAACAAYAAAAQAAAAAAACAAYAAAAQAAEAAAACAAYAAAAKAP//AAABAAEAAAAKAAAAAAABAAYAAAAKAAEAAAABAAYAAAA=")
 tile_set = SubResource("TileSet_mu6qd")
 
@@ -764,7 +766,6 @@ position = Vector2(324, -189)
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_75nji")]
 offset_left = 37.0
 offset_right = 9303.0
-speed = 120
 
 [node name="gateway" parent="." instance=ExtResource("6_r02hc")]
 position = Vector2(81, -262)
@@ -772,6 +773,27 @@ position = Vector2(81, -262)
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_7ab5g")]
 
 [node name="Area2D" type="Area2D" parent="."]
+
+[node name="Note1" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(134, 0)
+
+[node name="Note2" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(312, 0)
+
+[node name="Note3" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(59, -90)
+
+[node name="Note4" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(168, -144)
+
+[node name="Note5" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(315, -126)
+
+[node name="Note6" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(179, -216)
+
+[node name="Note7" parent="." instance=ExtResource("8_apt32")]
+position = Vector2(322, -197)
 
 [connection signal="body_entered" from="TileMaps/front_ground/Area2D" to="TileMaps/front_ground/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMaps/front_ground/Area2D" to="TileMaps/front_ground/Area2D/CollisionShape2D" method="_on_area_2d_body_exited"]
