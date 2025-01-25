@@ -891,13 +891,9 @@ speed_scale = 3.0
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_jyijv")]
 offset_left = 37.0
 offset_right = 9303.0
-speed = 60
+speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("6_8dj3w")]
-
-[node name="Note" parent="." instance=ExtResource("7_tbc8c")]
-visible = false
-position = Vector2(94, -34)
 
 [node name="gateway" parent="." instance=ExtResource("8_my5e5")]
 position = Vector2(351, -244)
@@ -908,6 +904,40 @@ offset_top = -286.0
 offset_right = 322.0
 offset_bottom = -263.0
 
+[node name="Note1" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(103, -54)
+
+[node name="Note2" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(304, -236)
+id = 1
+
+[node name="Note3" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(118, -231)
+id = 2
+
+[node name="Note4" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(119, -179)
+id = 3
+
+[node name="Note5" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(342, -2)
+id = 4
+
+[node name="Note6" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(219, -54)
+id = 5
+
+[node name="Note7" parent="." instance=ExtResource("7_tbc8c")]
+position = Vector2(246, -126)
+id = 6
+
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
-[connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="body_entered" from="gateway" to="." method="_on_area_2d_body_entered"]
+[connection signal="catch" from="Note1" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note2" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note3" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note4" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note5" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note6" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note7" to="." method="_on_note_catch"]
