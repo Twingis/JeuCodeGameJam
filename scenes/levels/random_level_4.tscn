@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://boxboohmarlq2"]
+[gd_scene load_steps=29 format=4 uid="uid://boxboohmarlq2"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_cqy5r"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_0behh"]
@@ -11,8 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="9_lh8o0"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="10_pm7ho"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="11_jlhg6"]
-[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="11_p5r1u"]
-[ext_resource type="PackedScene" uid="uid://ly5schhf5cis" path="res://scenes/musique_jeu_4.tscn" id="13_e56ws"]
+[ext_resource type="PackedScene" path="res://label_portes.tscn" id="11_p5r1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -1040,8 +1039,6 @@ libraries = {
 "": SubResource("AnimationLibrary_vjysa")
 }
 script = ExtResource("11_jlhg6")
-
-[node name="MusiqueJeu4" parent="." instance=ExtResource("13_e56ws")]
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]

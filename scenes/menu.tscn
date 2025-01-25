@@ -49,8 +49,7 @@ theme_override_constants/shadow_offset_y = 4
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_font_sizes/font_size = 50
-text = "Symphonite 
-Adventure"
+text = "Symphonite  Adventure"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -58,6 +57,7 @@ justification_flags = 0
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -83,6 +83,20 @@ theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1
 theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
 theme_override_fonts/font = ExtResource("2_sxk5e")
 text = "Tutorial"
+icon = ExtResource("4_phbse")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("2_sxk5e")
+text = "Credits"
 icon = ExtResource("4_phbse")
 flat = true
 clip_text = true
@@ -127,5 +141,6 @@ root_path = NodePath("..")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

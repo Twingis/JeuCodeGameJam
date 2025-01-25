@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://pgnqg3t0cb4h"]
+[gd_scene load_steps=25 format=4 uid="uid://pgnqg3t0cb4h"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_81qng"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_f2xsv"]
@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="6_r5550"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_agi40"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_s116e"]
-[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="9_3onm4"]
-[ext_resource type="PackedScene" uid="uid://dn83j51x0j3qv" path="res://scenes/musique_jeu_5.tscn" id="10_g8lpo"]
+[ext_resource type="PackedScene" path="res://label_portes.tscn" id="9_3onm4"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="10_6dsk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -502,6 +502,97 @@ size = Vector2(18, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euwb2"]
 size = Vector2(36, 4)
 
+[sub_resource type="Curve2D" id="Curve2D_f6nla"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 279, -277, 24.0271, -26.6967, -24.0271, 26.6967, 321, -147, 63.4048, -23.3597, -63.4048, 23.3597, 140, -244, 0, 0, 0, 0, 54, -80)
+}
+point_count = 4
+
+[sub_resource type="Animation" id="Animation_t33j0"]
+resource_name = "new_animation"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.63333, 3.33333, 5),
+"transitions": PackedFloat32Array(2.73208, 0.535887, 0.517632, 2.46229),
+"update": 0,
+"values": [0.0, 0.251852, 0.62963, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/cutscene camera:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody2D/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_sedby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/cutscene camera:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody2D/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65qv6"]
+_data = {
+"RESET": SubResource("Animation_sedby"),
+"new_animation": SubResource("Animation_t33j0")
+}
+
 [node name="RandomLevel1" type="Node2D"]
 script = ExtResource("1_81qng")
 
@@ -510,6 +601,7 @@ position = Vector2(37, -12)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 12)
+enabled = false
 zoom = Vector2(4, 4)
 limit_left = -16
 limit_top = -370
@@ -763,7 +855,22 @@ offset_top = -319.0
 offset_right = 254.0
 offset_bottom = -280.0
 
-[node name="MusiqueJeu5" parent="." instance=ExtResource("10_g8lpo")]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_f6nla")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(279, -277)
+rotation = 1.2583
+
+[node name="cutscene camera" type="Camera2D" parent="Path2D/PathFollow2D"]
+enabled = false
+zoom = Vector2(5, 5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_65qv6")
+}
+script = ExtResource("10_6dsk2")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
