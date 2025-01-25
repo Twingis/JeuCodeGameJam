@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5j85uufstbx5"]
+
+[ext_resource type="AudioStream" uid="uid://dceey1snsrkd0" path="res://assets/musics/cutsceneMusique.mp3" id="1_rka57"]
+
+[node name="custsceneAudio" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_rka57")
+pitch_scale = 1.2
+autoplay = true

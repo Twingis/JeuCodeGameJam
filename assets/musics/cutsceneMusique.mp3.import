@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/cutsceneMusique.mp3-436f42d429efb7b471c2bf983
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

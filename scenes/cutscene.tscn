@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ktoicc47jyvb"]
+[gd_scene load_steps=4 format=3 uid="uid://ktoicc47jyvb"]
 
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_vldr5"]
 [ext_resource type="VideoStream" path="res://assets/cutscene/Il-était-une-fois-une-fille-random.ogv" id="2_pvhf4"]
+[ext_resource type="PackedScene" uid="uid://b5j85uufstbx5" path="res://scenes/cutsceneAudio.tscn" id="3_ipttq"]
 
 [node name="Cutscene" type="Control"]
 layout_mode = 3
@@ -22,5 +23,7 @@ grow_vertical = 2
 stream = ExtResource("2_pvhf4")
 autoplay = true
 expand = true
+
+[node name="Node" parent="." instance=ExtResource("3_ipttq")]
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
