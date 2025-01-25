@@ -106,6 +106,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="TextureRect2" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -114,6 +115,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="TextureRect3" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -122,6 +124,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="TextureRect4" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -130,6 +133,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="TextureRect5" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -138,6 +142,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="TextureRect6" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -147,6 +152,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 size_flags_stretch_ratio = 8.5
+texture = null
 expand_mode = 2
 
 [node name="TextureRect7" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -155,6 +161,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+texture = null
 expand_mode = 2
 
 [node name="Control4" type="Control" parent="MarginContainer/VBoxContainer"]
