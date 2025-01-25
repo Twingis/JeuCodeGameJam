@@ -4,9 +4,14 @@
 [ext_resource type="Script" path="res://scripts/texture_progress_bar.gd" id="1_vvwsb"]
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
-offset_right = 9266.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -4633.0
+offset_right = 4633.0
 offset_bottom = 1670.0
-scale = Vector2(0.03, 0.024)
+grow_horizontal = 2
+scale = Vector2(0.09, 0.072)
 max_value = 2000.0
 value = 2000.0
 texture_progress = ExtResource("1_7wx4e")
