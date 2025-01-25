@@ -25,7 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-visible = false
 layout_mode = 2
 texture = ExtResource("1_auv6r")
 expand_mode = 2

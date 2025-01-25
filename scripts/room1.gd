@@ -52,4 +52,3 @@ func tri_notes(tab : Array, model : Array) -> Array :
 	for element in model :
 		sort.append(tab[element])
 	return sort
-	
