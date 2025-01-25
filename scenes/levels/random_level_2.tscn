@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsaoy2fasev17" path="res://scenes/platforms/feuilles.tscn" id="7_rdeyh"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_apt32"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="13_36rcd"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="13_kaexu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -857,8 +858,10 @@ position = Vector2(324, -189)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_75nji")]
-offset_left = 37.0
-offset_right = 9303.0
+offset_left = -418.0
+offset_top = 3.0
+offset_right = 8848.0
+offset_bottom = 1673.0
 speed = 120
 
 [node name="gateway" parent="." instance=ExtResource("6_r02hc")]
@@ -893,11 +896,11 @@ id = 5
 position = Vector2(322, -197)
 id = 6
 
-[node name="Label" type="Label" parent="."]
-offset_left = 282.0
-offset_top = -286.0
-offset_right = 322.0
-offset_bottom = -263.0
+[node name="Label" parent="." instance=ExtResource("13_kaexu")]
+offset_left = 63.0
+offset_top = -317.0
+offset_right = 141.0
+offset_bottom = -278.0
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_lefip")

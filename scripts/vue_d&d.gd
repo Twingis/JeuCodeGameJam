@@ -1,10 +1,5 @@
 extends Control
 
-var list_scenes = [
-	"res://scenes/levels/random_level_1.tscn",
-	"res://scenes/levels/random_level_2.tscn",
-]
-
 static var sounds = {
 		0: load("res://assets/musics/95326__ramas26__a.mp3"),
 		1: load("res://assets/musics/95327__ramas26__b.mp3"),
@@ -124,8 +119,11 @@ func _on_check_pressed() -> void:
 	print(list_recup_note)
 	print(melodie)
 	if list_recup_note == melodie:
-		var next_scene = list_scenes[randi()%list_scenes.size()-1]
-		get_tree().change_scene_to_file(next_scene)
+		var rand_room_num = randi_range(1,6)
+		var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
+		get_tree().change_scene_to_file(path)
+	else:
+		_on_reset_notes_pressed()
 
 func _process(delta: float) -> void:
 	print("Global list notes",Global.list_notes)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://btu88khaggb7x"]
+
+[ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="1_7478d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qasa"]
+font = ExtResource("1_7478d")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label"]
+texture_filter = 1
+offset_left = 299.0
+offset_top = -301.0
+offset_right = 377.0
+offset_bottom = -262.0
+text = "Tu n'as pas aidé toutes les notes :("
+label_settings = SubResource("LabelSettings_0qasa")
+autowrap_mode = 2

@@ -3,6 +3,9 @@ extends Control
 var list_scenes = [
 	"res://scenes/levels/random_level_1.tscn",
 	"res://scenes/levels/random_level_2.tscn",
+	"res://scenes/levels/random_level_3.tscn",
+	"res://scenes/levels/random_level_4.tscn",
+	"res://scenes/levels/random_level_5.tscn"
 ]
 
 func _on_play_pressed() -> void:

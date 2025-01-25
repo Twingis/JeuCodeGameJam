@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg4grlbemoasp"]
+[gd_scene load_steps=3 format=3 uid="uid://cg4grlbemoasp"]
 
+[ext_resource type="Texture2D" uid="uid://cxtj4j1wlyifb" path="res://assets/dragAndDropInterface/Notes/spriteNote_la.png" id="1_rcqsb"]
 [ext_resource type="Script" path="res://scripts/dragAndDrop.gd" id="2_g11w0"]
 
 [node name="TextureRect" type="TextureRect"]
 custom_minimum_size = Vector2(100, 100)
+texture = ExtResource("1_rcqsb")
 expand_mode = 1
 script = ExtResource("2_g11w0")
 

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="9_lh8o0"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="10_pm7ho"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="11_jlhg6"]
+[ext_resource type="PackedScene" path="res://label_portes.tscn" id="11_p5r1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -1017,11 +1018,11 @@ id = 6
 [node name="gateway" parent="." instance=ExtResource("10_pm7ho")]
 position = Vector2(351, -244)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 282.0
-offset_top = -286.0
-offset_right = 322.0
-offset_bottom = -263.0
+[node name="Label" parent="." instance=ExtResource("11_p5r1u")]
+offset_left = 302.0
+offset_top = -307.0
+offset_right = 380.0
+offset_bottom = -268.0
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(0, -1)
