@@ -1,7 +1,7 @@
 extends Node2D
 
 var notes_ramasses : Array = []
-var melody : Array = [5,4,2,0,6,1,3]
+var melody : Array = [0,1,2,3,4,5,6]
 var notes_sorted = []
 
 
@@ -14,6 +14,7 @@ func _ready() -> void:
 	for note in melody :
 		if note == null :
 			print("il y a une note null")
+	melody.shuffle()
 
 
 func _on_note_catch(note : Area2D) -> void:
@@ -33,8 +34,14 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		$Label.text = "Vous n'avez pas toutes les notes"
 	else :
 		$Label.text = ""
-		notes_sorted = tri_notes(notes_ramasses, melody)
-		await play_notes_with_delay(notes_sorted, 0.5)  # 0.5 secondes entre chaque note
+		print(notes_ramasses)
+		for note in notes_ramasses:
+			Global.update_list_notes(note.id)
+		Global.update_melodie(melody)
+
+		get_tree().change_scene_to_file("res://scenes/VueD&D.tscn")
+
+		
 
 # Fonction pour jouer les notes avec un délai
 func play_notes_with_delay(notes_sorted: Array, delay: float) -> void:

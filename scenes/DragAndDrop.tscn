@@ -14,3 +14,7 @@ layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://0t7lbqogugu0"]
+[gd_scene load_steps=8 format=3 uid="uid://0t7lbqogugu0"]
 
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="1_auv6r"]
 [ext_resource type="PackedScene" uid="uid://cg4grlbemoasp" path="res://scenes/DragAndDrop.tscn" id="1_nras2"]
 [ext_resource type="Script" path="res://scripts/vue_d&d.gd" id="1_rfwgc"]
 [ext_resource type="Texture2D" uid="uid://ckioo7vedpo3t" path="res://assets/dragAndDropInterface/backgroundNotesEmpty.png" id="2_28f0q"]
+[ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="3_ecxot"]
+[ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="4_334rk"]
 [ext_resource type="Texture2D" uid="uid://gmrxl60dusf6" path="res://assets/dragAndDropInterface/spriteNote_sol.png" id="4_ky4xw"]
 
 [node name="Root" type="Control"]
@@ -37,12 +39,48 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Listen Melody" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("3_ecxot")
+text = "Listen 
+Melody"
+icon = ExtResource("4_334rk")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="Control5" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Melody to compose" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.051971, 0.051971, 0.051971, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_ecxot")
+theme_override_font_sizes/font_size = 30
+text = "Melody to compose"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
 [node name="Portee" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 texture = ExtResource("2_28f0q")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Portee"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Portee"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -60,7 +98,7 @@ size_flags_stretch_ratio = 0.8
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="TextureRect" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -68,7 +106,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect2" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect2" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -76,7 +114,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect3" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect3" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -84,7 +122,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect4" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect4" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -92,7 +130,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect5" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect5" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -100,7 +138,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect6" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect6" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -108,7 +146,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 expand_mode = 2
 
-[node name="TextureRect7" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect7" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
 clip_contents = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -120,48 +158,108 @@ expand_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Check" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("3_ecxot")
+text = "Check"
+icon = ExtResource("4_334rk")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Notes recover" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.051971, 0.051971, 0.051971, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_ecxot")
+theme_override_font_sizes/font_size = 30
+text = "Notes recover"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="HBoxContainerNotesRamassee" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
 theme_override_constants/separation = 26
 alignment = 1
 
-[node name="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect1" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
 
-[node name="TextureRect2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect2" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 1
 
-[node name="TextureRect3" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect3" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 2
 
-[node name="TextureRect4" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect4" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 3
 
-[node name="TextureRect5" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect5" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 4
 
-[node name="TextureRect6" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect6" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 5
 
-[node name="TextureRect7" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_nras2")]
+[node name="TextureRect7" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
 texture = ExtResource("4_ky4xw")
 expand_mode = 2
+id = 6
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Listen Melody" to="." method="_on_listen_melody_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Check" to="." method="_on_check_pressed"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect2" to="." method="_on_texture_rect_2_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect2" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect3" to="." method="_on_texture_rect_3_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect3" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect4" to="." method="_on_texture_rect_4_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect4" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect5" to="." method="_on_texture_rect_5_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect5" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect6" to="." method="_on_texture_rect_6_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect6" to="." method="_on_texture_rect_gui_input"]
+[connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect7" to="." method="_on_texture_rect_7_clicked"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect7" to="." method="_on_texture_rect_gui_input"]

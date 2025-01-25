@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://grl0ph6votb1"]
+[gd_scene load_steps=19 format=4 uid="uid://8kjaaoov2pqr"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="4_fxchm"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="5_75nji"]
 [ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="6_r02hc"]
-[ext_resource type="PackedScene" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
+[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_apt32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
@@ -500,11 +500,11 @@ size = Vector2(18, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euwb2"]
 size = Vector2(36, 4)
 
-[node name="RandomLevel2" type="Node2D"]
+[node name="RandomLevel1" type="Node2D"]
 script = ExtResource("1_vjpmb")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_wxjrb")]
-position = Vector2(36, -12)
+position = Vector2(37, -12)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 12)
@@ -623,16 +623,14 @@ texture = ExtResource("3_vfrxm")
 region_enabled = true
 region_rect = Rect2(234, 126, 18, 14)
 
+[node name="Area2D" parent="." instance=ExtResource("6_r02hc")]
+position = Vector2(351, -244)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_75nji")]
-offset_left = 12.0
-offset_top = 11.0
-offset_right = 3852.0
-offset_bottom = 505.0
-
-[node name="gateway" parent="." instance=ExtResource("6_r02hc")]
-position = Vector2(351, -244)
+offset_left = 37.0
+offset_right = 9303.0
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_7ab5g")]
 
@@ -641,20 +639,42 @@ position = Vector2(262, -144)
 
 [node name="Note2" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(311, 0)
+id = 1
 
 [node name="Note3" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(111, -234)
+id = 2
 
 [node name="Note4" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(158, -145)
+id = 3
 
 [node name="Note5" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(217, -216)
+id = 4
 
 [node name="Note6" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(162, -54)
+id = 5
 
 [node name="Note7" parent="." instance=ExtResource("8_apt32")]
 position = Vector2(85, -34)
+id = 6
 
+[node name="Label" type="Label" parent="."]
+offset_left = 282.0
+offset_top = -286.0
+offset_right = 322.0
+offset_bottom = -263.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
+[connection signal="catch" from="Note1" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note2" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note3" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note4" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note5" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note6" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note7" to="." method="_on_note_catch"]
