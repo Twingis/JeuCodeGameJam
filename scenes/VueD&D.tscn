@@ -78,6 +78,9 @@ justification_flags = 0
 [node name="Portee" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 3.0
 texture = ExtResource("2_28f0q")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Portee"]
@@ -87,10 +90,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -274.5
-offset_top = -25.5
-offset_right = 274.5
-offset_bottom = 49.5
+offset_left = -412.5
+offset_top = -37.0
+offset_right = 412.5
+offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -144,6 +147,7 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+size_flags_stretch_ratio = 8.5
 expand_mode = 2
 
 [node name="TextureRect7" parent="MarginContainer/VBoxContainer/Portee/HBoxContainer2" instance=ExtResource("1_nras2")]
@@ -157,8 +161,13 @@ expand_mode = 2
 [node name="Control4" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
-[node name="Check" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Check" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -172,11 +181,11 @@ flat = true
 clip_text = true
 icon_alignment = 1
 
-[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
-[node name="Reset Notes" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Reset Notes" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -189,6 +198,11 @@ icon = ExtResource("4_334rk")
 flat = true
 clip_text = true
 icon_alignment = 1
+
+[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="Notes recover" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -205,6 +219,11 @@ text = "Notes recover"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
+
+[node name="Control7" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="HBoxContainerNotesRamassee" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -262,8 +281,8 @@ size_flags_vertical = 3
 bus = &"Music"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Listen Melody" to="." method="_on_listen_melody_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Check" to="." method="_on_check_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Reset Notes" to="." method="_on_reset_notes_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Reset Notes" to="." method="_on_reset_notes_pressed"]
 [connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_clicked"]
 [connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_gui_input"]
 [connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect2" to="." method="_on_texture_rect_2_clicked"]

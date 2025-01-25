@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ktoicc47jyvb"]
+[gd_scene load_steps=3 format=3 uid="uid://nlv42oy7fpsj"]
 
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_vldr5"]
 [ext_resource type="VideoStream" path="res://assets/cutscene/Il-était-une-fois-une-fille-random.ogv" id="2_pvhf4"]
