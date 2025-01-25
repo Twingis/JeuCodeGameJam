@@ -126,6 +126,8 @@ func _on_check_pressed() -> void:
 	if list_recup_note == melodie:
 		var next_scene = list_scenes[randi()%list_scenes.size()-1]
 		get_tree().change_scene_to_file(next_scene)
+	else:
+		_on_reset_notes_pressed()
 
 func _process(delta: float) -> void:
 	print("Global list notes",Global.list_notes)
