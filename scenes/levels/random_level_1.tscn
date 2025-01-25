@@ -732,7 +732,6 @@ offset_top = 6.0
 offset_right = 8248.0
 offset_bottom = 1028.0
 grow_vertical = 2
-speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
 

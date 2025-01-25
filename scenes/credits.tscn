@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyj7t6c1m053m"]
+[gd_scene load_steps=6 format=3 uid="uid://b6rwlyaohd1o7"]
 
-[ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="1_8cbnl"]
-[ext_resource type="Script" path="res://scripts/tutoriel.gd" id="1_8yhtg"]
-[ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="1_qfnwm"]
-[ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="2_4lg8w"]
-[ext_resource type="PackedScene" uid="uid://dl8elg7yaxtm4" path="res://scenes/install_sounds.tscn" id="3_687uf"]
+[ext_resource type="Script" path="res://scripts/tutoriel.gd" id="1_6w1gp"]
+[ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="2_3evdk"]
+[ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="3_iwrmb"]
+[ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="4_p2mu0"]
+[ext_resource type="PackedScene" uid="uid://dl8elg7yaxtm4" path="res://scenes/install_sounds.tscn" id="5_def6f"]
 
 [node name="Tutoriel" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8yhtg")
+script = ExtResource("1_6w1gp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -25,7 +25,7 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1_8cbnl")
+texture = ExtResource("2_3evdk")
 expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -38,13 +38,13 @@ size_flags_vertical = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.08
+size_flags_stretch_ratio = 2.08
 
 [node name="d2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
+size_flags_stretch_ratio = 1.2
 
 [node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -52,19 +52,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
-text = "Bienvenue dans ce tutoriel, 
-nous allons dans cette page vous montrez les différentes touches utilisables.
+text = "Les Bits En Loire
+Equipe n°34
 
-Les touhes directionnelles droite et gauche 
-permettent de se diriger dans leurs directions respectives.
-Pour sauter il faut appuyer sur la touche espace.
-Enfin pour ouvrir une porte pour passer au prochain niveau, il faut trouver et rentrer le bon ordre des 
-notes en déplaçant avec la souris les notes aux endroits voulus, vous pouvez écouter la mélodie autant de 
-fois que vous voulez pour trouver le bon ordre.
-
-Il vous faudra récupérer toutes les notes d'un niveau pour pouvoir passer au suivant.
-Vous aurez un certain temps pour passer chaque salles qui peut être rallonger en ramassant les notes.
-Toutes les 5 salles se trouve un boss que vous devrez vaincre grâce à un QTE (quick time event)."
+Benjamin Lecomte
+Loris Drouhot
+Clément Lerouley
+Clément Marquis
+Clément Hubert
+Rafael Café"
 editable = false
 context_menu_enabled = false
 shortcut_keys_enabled = false
@@ -80,7 +76,7 @@ indent_wrapped_lines = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
+size_flags_stretch_ratio = 1.2
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -94,9 +90,9 @@ size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
 theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
 theme_override_colors/icon_hover_color = Color(0.443137, 0.443137, 0.443137, 1)
-theme_override_fonts/font = ExtResource("1_qfnwm")
+theme_override_fonts/font = ExtResource("3_iwrmb")
 text = "Back"
-icon = ExtResource("2_4lg8w")
+icon = ExtResource("4_p2mu0")
 flat = true
 clip_text = true
 icon_alignment = 1
@@ -106,7 +102,7 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
 
-[node name="InstallSounds" parent="." instance=ExtResource("3_687uf")]
+[node name="InstallSounds" parent="." instance=ExtResource("5_def6f")]
 root_path = NodePath("..")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
