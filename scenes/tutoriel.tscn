@@ -64,7 +64,7 @@ fois que vous voulez pour trouver le bon ordre.
 
 Il vous faudra récupérer toutes les notes d'un niveau pour pouvoir passer au suivant.
 Vous aurez un certain temps pour passer chaque salles qui peut être rallonger en ramassant les notes.
-Toutes les 5 salles se trouve un boss que vous devrez vaincre grâce à un QTE (quick time event)."
+Toutes les 3 salles se trouve un boss que vous devrez vaincre grâce à un QTE (quick time event)."
 editable = false
 context_menu_enabled = false
 shortcut_keys_enabled = false

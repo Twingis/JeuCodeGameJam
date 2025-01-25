@@ -10,6 +10,16 @@ static var sounds = {
 		6: load("res://assets/musics/95332__ramas26__g.mp3"),
 	}
 	
+	
+var list_scenes = [
+	"res://scenes/levels/random_level_1.tscn",
+	"res://scenes/levels/random_level_2.tscn",
+	"res://scenes/levels/random_level_3.tscn",
+	"res://scenes/levels/random_level_4.tscn",
+	"res://scenes/levels/random_level_5.tscn",
+	"res://scenes/levels/random_level_7.tscn",
+]
+
 var sounds_list = []
 var notes_list = Global.list_notes.duplicate(true)
 
@@ -112,6 +122,7 @@ func _on_texture_rect_7_clicked(note: AudioStreamPlayer) -> void:
 
 
 func _on_check_pressed() -> void:
+	
 	var list_recup_note = []
 	var melodie = Global.melodie
 	var hbox = $MarginContainer/VBoxContainer/Portee/HBoxContainer2
@@ -123,14 +134,13 @@ func _on_check_pressed() -> void:
 	print(melodie)
 	if list_recup_note == melodie:
 		NbRoom.update_nombre_room()
-		if NbRoom.get_nombre_room() > 5:
-			var path = "res://scenes/levels/random_level_"+str(6)+".tscn"
-			Global.NbRoom.reset()
+		if NbRoom.get_nombre_room() > 3:
+			var path = "res://scenes/levels/random_level_6.tscn"
+			NbRoom.reset()
 			get_tree().change_scene_to_file(path)
 		else:
-			var rand_room_num = randi_range(1,5)
-			var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
-			get_tree().change_scene_to_file(path)
+			var next_scene = list_scenes[randi()%list_scenes.size()-1]
+			get_tree().change_scene_to_file(next_scene)
 	else:
 		_on_reset_notes_pressed()
 

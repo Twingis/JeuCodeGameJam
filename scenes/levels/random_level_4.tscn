@@ -982,8 +982,8 @@ speed_scale = 3.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("7_vt85q")]
-offset_left = 37.0
-offset_right = 9303.0
+offset_left = -420.0
+offset_right = 8846.0
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("8_l1lnx")]
 
@@ -1040,7 +1040,7 @@ libraries = {
 }
 script = ExtResource("11_jlhg6")
 
-[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
+[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note2" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note3" to="." method="_on_note_catch"]
