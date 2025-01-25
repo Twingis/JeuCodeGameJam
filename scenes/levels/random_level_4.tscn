@@ -896,8 +896,31 @@ speed = 60
 [node name="MusiqueJeu" parent="." instance=ExtResource("8_l1lnx")]
 
 [node name="Note" parent="." instance=ExtResource("9_lh8o0")]
-visible = false
-position = Vector2(94, -34)
+position = Vector2(97, -35)
+
+[node name="Note2" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(135, -89)
+id = 1
+
+[node name="Note3" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(341, 0)
+id = 2
+
+[node name="Note4" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(351, -88)
+id = 3
+
+[node name="Note5" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(228, -126)
+id = 4
+
+[node name="Note6" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(102, -233)
+id = 5
+
+[node name="Note7" parent="." instance=ExtResource("9_lh8o0")]
+position = Vector2(198, -270)
+id = 6
 
 [node name="gateway" parent="." instance=ExtResource("10_pm7ho")]
 position = Vector2(351, -244)
@@ -910,4 +933,10 @@ offset_bottom = -263.0
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note2" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note3" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note4" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note5" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note6" to="." method="_on_note_catch"]
+[connection signal="catch" from="Note7" to="." method="_on_note_catch"]
 [connection signal="body_entered" from="gateway" to="." method="_on_area_2d_body_entered"]
