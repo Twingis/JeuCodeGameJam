@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://c8y11lo2dvg44"]
+[gd_scene load_steps=27 format=4 uid="uid://c8y11lo2dvg44"]
 
 [ext_resource type="Script" path="res://scripts/random_level_5.gd" id="1_u53dm"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_5v0kh"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cnon2gyl3c6xt" path="res://assets/tiles/boss/alain_0002.png" id="12_rpuwk"]
 [ext_resource type="Script" path="res://scripts/boss.gd" id="13_dvrcf"]
 [ext_resource type="Texture2D" uid="uid://bfwsm41odob8j" path="res://assets/tiles/boss/alain_0003.png" id="13_nd730"]
+[ext_resource type="PackedScene" uid="uid://cvcki1uxg7tjj" path="res://scenes/musique_boss.tscn" id="15_clo6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -895,6 +896,8 @@ offset_top = -83.0
 offset_right = 58.0
 offset_bottom = -60.0
 text = "Attention au QTE"
+
+[node name="MusiqueBoss" parent="." instance=ExtResource("15_clo6c")]
 
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
 [connection signal="body_entered" from="gateway" to="CharacterBody2D" method="_on_gateway_body_entered"]

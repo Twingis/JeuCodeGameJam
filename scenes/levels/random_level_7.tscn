@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bp6txk431ewy7"]
+[gd_scene load_steps=30 format=4 uid="uid://bhscrgtaor05x"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_6u88n"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_d68fj"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d0pltjpgjwiy2" path="res://scenes/platforms/cloud_default.tscn" id="9_my6i0"]
 [ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="9_s5xec"]
 [ext_resource type="PackedScene" uid="uid://e8chgcj0obt7" path="res://scenes/platforms/cloud_small.tscn" id="10_gdl7b"]
+[ext_resource type="PackedScene" uid="uid://dn83j51x0j3qv" path="res://scenes/musique_jeu_5.tscn" id="16_qc1fb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -1260,7 +1261,6 @@ position = Vector2(315, -261)
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("6_aprxg")]
 offset_top = 0.0
 offset_bottom = 1670.0
-speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_fnvtq")]
 
@@ -1298,6 +1298,8 @@ offset_left = 326.0
 offset_top = -258.0
 offset_right = 404.0
 offset_bottom = -219.0
+
+[node name="MusiqueJeu5" parent="." instance=ExtResource("16_qc1fb")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
