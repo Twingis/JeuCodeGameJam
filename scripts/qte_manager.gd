@@ -66,6 +66,5 @@ func _input(event: InputEvent) -> void:
 			timer.stop()
 
 func _on_QTE_Timer_timeout() -> void:
-	feedback_label.text = "Temps écoulé !"
-	active = false
-	perdu.emit()
+	get_tree().change_scene_to_file("res://scenes/endMenu.tscn")
+	

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 Score="*res://scripts/score.gd"
 Global="*res://scripts/Global.gd"
+NbRoom="*res://scripts/nbRoom.gd"
 
 [display]
 
