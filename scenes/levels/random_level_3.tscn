@@ -898,7 +898,6 @@ speed = 60
 [node name="Note" parent="." instance=ExtResource("7_tbc8c")]
 visible = false
 position = Vector2(94, -34)
-scale = Vector2(2, 2)
 
 [node name="gateway" parent="." instance=ExtResource("8_my5e5")]
 position = Vector2(351, -244)

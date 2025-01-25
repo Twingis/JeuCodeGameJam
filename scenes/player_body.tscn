@@ -1,36 +1,30 @@
 [gd_scene load_steps=8 format=3 uid="uid://ubge28h5l3qp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6lcpc"]
-[ext_resource type="Texture2D" uid="uid://b5cxkyg1r6bp4" path="res://assets/menu/tilemap-characters_packed.png" id="2_31o88"]
+[ext_resource type="Texture2D" uid="uid://n4i7heli4kns" path="res://assets/tiles/player/player_spritesheet_0012.png" id="2_5tp0a"]
+[ext_resource type="Texture2D" uid="uid://r2puocqb8ua4" path="res://assets/tiles/player/player_spritesheet_0016.png" id="3_5fj6n"]
+[ext_resource type="Texture2D" uid="uid://b32smwbyfqba6" path="res://assets/tiles/player/player_spritesheet_0018.png" id="4_rkqv0"]
+[ext_resource type="Texture2D" uid="uid://bj0otkagw2x0a" path="res://assets/tiles/player/player_spritesheet_0013.png" id="5_s1mxq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgooc"]
-size = Vector2(16, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_65g3b"]
-atlas = ExtResource("2_31o88")
-region = Rect2(144, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oe2q7"]
-atlas = ExtResource("2_31o88")
-region = Rect2(168, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8iov"]
-atlas = ExtResource("2_31o88")
-region = Rect2(144, 0, 24, 24)
+size = Vector2(13, 22)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ch32k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_65g3b")
+"texture": ExtResource("2_5tp0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5fj6n")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oe2q7")
+"texture": ExtResource("4_rkqv0")
 }],
 "loop": true,
 "name": &"jump",
@@ -38,14 +32,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x8iov")
+"texture": ExtResource("5_s1mxq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oe2q7")
+"texture": ExtResource("2_5tp0a")
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -54,9 +48,11 @@ collision_layer = 3
 script = ExtResource("1_6lcpc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_pgooc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_ch32k")
-animation = &"jump"
+animation = &"run"
