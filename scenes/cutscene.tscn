@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://nlv42oy7fpsj"]
+[gd_scene load_steps=6 format=3 uid="uid://nlv42oy7fpsj"]
 
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_vldr5"]
 [ext_resource type="VideoStream" path="res://assets/cutscene/Il-était-une-fois-une-fille-random.ogv" id="2_pvhf4"]
-[ext_resource type="PackedScene" uid="uid://b5j85uufstbx5" path="res://scenes/cutsceneAudio.tscn" id="3_ipttq"]
+[ext_resource type="AudioStream" uid="uid://ctb5ffx2kyvw7" path="res://assets/cutscene/Bruitage.mp3" id="4_f0dva"]
+[ext_resource type="AudioStream" uid="uid://dceey1snsrkd0" path="res://assets/musics/cutsceneMusique.mp3" id="5_v5rye"]
+[ext_resource type="AudioStream" uid="uid://bd4ulhnpt43d2" path="res://assets/cutscene/Voix.mp3" id="5_yp0p5"]
 
 [node name="Cutscene" type="Control"]
 layout_mode = 3
@@ -24,6 +26,16 @@ stream = ExtResource("2_pvhf4")
 autoplay = true
 expand = true
 
-[node name="Node" parent="." instance=ExtResource("3_ipttq")]
+[node name="Bruitage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f0dva")
+
+[node name="Narration" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yp0p5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v5rye")
+pitch_scale = 1.2
+autoplay = true
+bus = &"Music"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
