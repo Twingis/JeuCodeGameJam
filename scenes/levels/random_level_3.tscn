@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gr7tsp4a585d" path="res://scenes/platforms/escalator.tscn" id="6_7vv3a"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="6_8dj3w"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_tbc8c"]
-[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="8_my5e5"]
+[ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="8_my5e5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -903,5 +903,12 @@ scale = Vector2(2, 2)
 [node name="gateway" parent="." instance=ExtResource("8_my5e5")]
 position = Vector2(351, -244)
 
+[node name="Label" type="Label" parent="."]
+offset_left = 282.0
+offset_top = -286.0
+offset_right = 322.0
+offset_bottom = -263.0
+
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
+[connection signal="body_entered" from="gateway" to="." method="_on_area_2d_body_entered"]

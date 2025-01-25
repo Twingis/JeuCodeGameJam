@@ -12,11 +12,3 @@ func _on_body_entered(body: PhysicsBody2D):
 func _on_body_exited(body):
 	print("sortie de la zone")
 	entered = false
-
-func _process(delta) :
-	if entered == true:
-		if Input.is_key_pressed(KEY_E):
-			print("changement de scène")
-			var rand_room_num = randi_range(1,3)
-			var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
-			get_tree().change_scene_to_file(path)

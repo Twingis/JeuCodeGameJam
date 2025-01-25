@@ -176,6 +176,20 @@ icon_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Reset Notes" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("3_ecxot")
+text = "Reset Notes"
+icon = ExtResource("4_334rk")
+flat = true
+clip_text = true
+icon_alignment = 1
+
 [node name="Notes recover" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
@@ -249,6 +263,7 @@ bus = &"Music"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Listen Melody" to="." method="_on_listen_melody_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Reset Notes" to="." method="_on_reset_notes_pressed"]
 [connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_clicked"]
 [connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect1" to="." method="_on_texture_rect_gui_input"]
 [connection signal="Clicked" from="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee/TextureRect2" to="." method="_on_texture_rect_2_clicked"]

@@ -7,7 +7,6 @@ func reset():
 	list_notes = []
 	melodie = []
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func update_list_notes(note : int):
 	list_notes.append(note)
 

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b5hh7vj7sgofi" path="res://assets/menu/tilemap_packed.png" id="2_35r11"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="3_5c1ap"]
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="3_53x1c"]
-[ext_resource type="PackedScene" path="res://scenes/gateway.tscn" id="5_hbp4r"]
+[ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="5_hbp4r"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_8ll3i"]
 
@@ -631,6 +631,7 @@ position = Vector2(351, -244)
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
 offset_left = 37.0
 offset_right = 9303.0
+speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
 

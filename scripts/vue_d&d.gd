@@ -16,7 +16,7 @@ static var sounds = {
 	}
 	
 var sounds_list = []
-var notes_list = Global.list_notes
+var notes_list = Global.list_notes.duplicate(true)
 
 	
 # Called when the node enters the scene tree for the first time.
@@ -32,13 +32,11 @@ func _ready() -> void:
 	}
 	
 	print("liste notes global", Global.list_notes)
-	
-	print("notesRamassee", notes_list)
-	
+		
 	for note in notes_list:
 		sounds_list.append(sounds[note])
 		
-	print(sounds_list)
+	print("notes liste avant pop", notes_list)
 	
 	var hbox = $MarginContainer/VBoxContainer/HBoxContainerNotesRamassee
 	 # Parcourir les enfants du HBoxContainer et attribuer les textures
@@ -128,3 +126,12 @@ func _on_check_pressed() -> void:
 	if list_recup_note == melodie:
 		var next_scene = list_scenes[randi()%list_scenes.size()-1]
 		get_tree().change_scene_to_file(next_scene)
+
+func _process(delta: float) -> void:
+	print("Global list notes",Global.list_notes)
+	print("Notes Liste",notes_list)
+
+
+func _on_reset_notes_pressed() -> void:
+	print("reset moment",Global.list_notes)
+	get_tree().change_scene_to_file("res://scenes/VueD&D.tscn")

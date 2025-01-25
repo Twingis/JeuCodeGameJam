@@ -14,11 +14,18 @@ static var  sounds: Array = [
 
 @export_range(0,6) var id : int
 var sound
+var is_drag_successful
+var initial_position = Vector2() # Position initiale
+var saveTexture
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sound = sounds[id]
 	$AudioStreamPlayer.stream = sound
+	is_drag_successful = false
+	initial_position = position
+	saveTexture = null
+
 
 func changeID(newID : int )  -> void :
 	id = newID
@@ -30,7 +37,8 @@ func changeTexture(newTexture)  -> void :
 	
 func getId() -> int :
 	return id
-
+		
+# Déclencher lorsque que l'on click et qu'on drag 
 func _get_drag_data(at_position):
 	var preview_texture = TextureRect.new()
 	preview_texture.texture = texture
@@ -43,19 +51,32 @@ func _get_drag_data(at_position):
 	set_drag_preview(preview)
 	texture = null
 	
-	var data = [getId(), preview_texture.texture]
+	saveTexture = preview_texture.texture
+	var data = [getId(), preview_texture.texture, at_position]
+	print("Get drag data ")
 	return data
 	
+# Déclencher lorsque on est au dessus d'une node (Button, Pane, TextureRect...) 
 func _can_drop_data(at_position, data):
+	print("is droppable")
 	return data is Array
 	
+# Déclencher lorsqu'on lâche l'item dans une zone valide
 func _drop_data(at_position, data):
+	print("La data est déposée correctement")
 	texture = data[1]
-	id = data[0]
+	var id = data[0]
 	changeID(id)
 	print(data)
+
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		emit_signal("Clicked", $AudioStreamPlayer)
 		
+func get_node_at_drag_position(at_position) -> TextureRect:
+	var nodes_in_group = get_tree().get_nodes_in_group("droppable")  # Ajoutez vos TextureRect dans un groupe "droppable"
+	for node in nodes_in_group:
+		if node is TextureRect and node.get_global_rect().has_point(at_position):
+			return node
+	return null

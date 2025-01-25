@@ -4,13 +4,12 @@ var notes_ramasses : Array = []
 var melody : Array = [0,1,2,3,4,5,6]
 var notes_sorted = []
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	print(notes_ramasses)
 
 func _ready() -> void:
+	notes_ramasses = []
 	for note in melody :
 		if note == null :
 			print("il y a une note null")
@@ -23,11 +22,8 @@ func _on_note_catch(note : Area2D) -> void:
 	notes_ramasses.append(note)
 	healthBar.soigner(100)
 
-
 func _on_texture_progress_bar_zéro() -> void:
 	get_tree().change_scene_to_file("res://scenes/endMenu.tscn")
-	
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if notes_ramasses.size() < melody.size() :
