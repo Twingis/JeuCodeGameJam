@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://8kjaaoov2pqr"]
+[gd_scene load_steps=24 format=4 uid="uid://8kjaaoov2pqr"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_vjpmb"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_wxjrb"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_7ab5g"]
 [ext_resource type="PackedScene" uid="uid://dsaoy2fasev17" path="res://scenes/platforms/feuilles.tscn" id="7_rdeyh"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_apt32"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="13_kaexu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -802,11 +803,11 @@ id = 5
 position = Vector2(322, -197)
 id = 6
 
-[node name="Label" type="Label" parent="."]
-offset_left = 282.0
-offset_top = -286.0
-offset_right = 322.0
-offset_bottom = -263.0
+[node name="Label" parent="." instance=ExtResource("13_kaexu")]
+offset_left = 63.0
+offset_top = -317.0
+offset_right = 141.0
+offset_bottom = -278.0
 
 [connection signal="body_entered" from="TileMaps/front_ground/Area2D" to="TileMaps/front_ground/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMaps/front_ground/Area2D" to="TileMaps/front_ground/Area2D/CollisionShape2D" method="_on_area_2d_body_exited"]

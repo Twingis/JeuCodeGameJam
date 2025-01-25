@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://boxboohmarlq2"]
+[gd_scene load_steps=24 format=4 uid="uid://boxboohmarlq2"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_cqy5r"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="2_0behh"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="8_l1lnx"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="9_lh8o0"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="10_pm7ho"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="11_p5r1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -927,11 +928,11 @@ id = 6
 [node name="gateway" parent="." instance=ExtResource("10_pm7ho")]
 position = Vector2(351, -244)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 282.0
-offset_top = -286.0
-offset_right = 322.0
-offset_bottom = -263.0
+[node name="Label" parent="." instance=ExtResource("11_p5r1u")]
+offset_left = 302.0
+offset_top = -307.0
+offset_right = 380.0
+offset_bottom = -268.0
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]

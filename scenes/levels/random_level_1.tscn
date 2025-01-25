@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://umjcj47snamt"]
+[gd_scene load_steps=20 format=4 uid="uid://umjcj47snamt"]
 
 [ext_resource type="Script" path="res://scripts/room1.gd" id="1_rbejo"]
 [ext_resource type="PackedScene" uid="uid://ubge28h5l3qp" path="res://scenes/player_body.tscn" id="1_yloam"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="5_hbp4r"]
 [ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_78kkl"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_8ll3i"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="9_ci8s1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -629,9 +630,7 @@ position = Vector2(351, -244)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
-offset_left = -416.0
 offset_top = 3.0
-offset_right = 8850.0
 offset_bottom = 1673.0
 speed = 120
 
@@ -664,11 +663,7 @@ id = 5
 position = Vector2(85, -34)
 id = 6
 
-[node name="Label" type="Label" parent="."]
-offset_left = 282.0
-offset_top = -286.0
-offset_right = 322.0
-offset_bottom = -263.0
+[node name="Label" parent="." instance=ExtResource("9_ci8s1")]
 
 [node name="Timer" type="Timer" parent="."]
 
