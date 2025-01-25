@@ -7,7 +7,7 @@ var list_scenes = [
 
 func _on_play_pressed() -> void:
 	var next_scene = list_scenes[randi()%list_scenes.size()-1]
-	get_tree().change_scene_to_file(next_scene)
+	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
 
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/tutoriel.tscn")

@@ -31,6 +31,7 @@ height = 12.0
 
 [node name="Note" type="Area2D"]
 position = Vector2(4, 132)
+scale = Vector2(2, 2)
 script = ExtResource("1_v3nb4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

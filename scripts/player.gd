@@ -37,9 +37,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("jump")
 			
 	if direction > 0 :
-		animated_sprite.flip_h = true
-	elif direction < 0:
 		animated_sprite.flip_h = false
+	elif direction < 0:
+		animated_sprite.flip_h = true
 		
 	if direction:
 		velocity.x = direction * SPEED

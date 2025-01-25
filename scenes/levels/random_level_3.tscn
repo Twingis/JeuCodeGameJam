@@ -891,14 +891,13 @@ speed_scale = 3.0
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_jyijv")]
 offset_left = 37.0
 offset_right = 9303.0
-speed = 120
+speed = 60
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("6_8dj3w")]
 
 [node name="Note" parent="." instance=ExtResource("7_tbc8c")]
 visible = false
 position = Vector2(94, -34)
-scale = Vector2(2, 2)
 
 [node name="gateway" parent="." instance=ExtResource("8_my5e5")]
 position = Vector2(351, -244)
