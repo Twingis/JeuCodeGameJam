@@ -894,7 +894,7 @@ offset_left = -419.0
 offset_top = 1.0
 offset_right = 8847.0
 offset_bottom = 1671.0
-speed = 60
+speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("8_l1lnx")]
 
