@@ -125,7 +125,7 @@ func _on_check_pressed() -> void:
 		NbRoom.update_nombre_room()
 		if NbRoom.get_nombre_room() > 5:
 			var path = "res://scenes/levels/random_level_"+str(6)+".tscn"
-			Global.NbRoom.reset()
+			NbRoom.reset()
 			get_tree().change_scene_to_file(path)
 		else:
 			var rand_room_num = randi_range(1,5)
