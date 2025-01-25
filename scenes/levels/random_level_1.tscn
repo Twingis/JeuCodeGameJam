@@ -723,8 +723,16 @@ position = Vector2(351, -244)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("3_5c1ap")]
-offset_top = 3.0
-offset_bottom = 1673.0
+anchors_preset = 15
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 134.0
+offset_top = 6.0
+offset_right = 8248.0
+offset_bottom = 1028.0
+grow_vertical = 2
+speed = 120
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("7_78kkl")]
 

@@ -16,6 +16,9 @@ var notes_list = Global.list_notes.duplicate(true)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	$MarginContainer/VBoxContainer/SolutionRect.visible = false
+	
 	var note_textures = {
 		0: preload("res://assets/dragAndDropInterface/Notes/spriteNote_la.png"),
 		1: preload("res://assets/dragAndDropInterface/Notes/spriteNote_si.png"),
@@ -119,17 +122,61 @@ func _on_check_pressed() -> void:
 	print(list_recup_note)
 	print(melodie)
 	if list_recup_note == melodie:
-		var rand_room_num = randi_range(1,6)
-		var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
-		get_tree().change_scene_to_file(path)
+		NbRoom.update_nombre_room()
+		if NbRoom.get_nombre_room() > 5:
+			var path = "res://scenes/levels/random_level_"+str(6)+".tscn"
+			Global.NbRoom.reset()
+			get_tree().change_scene_to_file(path)
+		else:
+			var rand_room_num = randi_range(1,5)
+			var path = "res://scenes/levels/random_level_"+str(rand_room_num)+".tscn"
+			get_tree().change_scene_to_file(path)
 	else:
 		_on_reset_notes_pressed()
 
 func _process(delta: float) -> void:
 	print("Global list notes",Global.list_notes)
 	print("Notes Liste",notes_list)
+	
 
 
 func _on_reset_notes_pressed() -> void:
 	print("reset moment",Global.list_notes)
 	get_tree().change_scene_to_file("res://scenes/VueD&D.tscn")
+
+
+func _on_solution_pressed() -> void:
+	$MarginContainer/VBoxContainer/Solution.visible = false
+	
+	var melodie = Global.melodie
+	
+	var allNote = {
+		0 : "La",
+		1 : "Si",
+		2 : "Do",
+		3 : "Re",
+		4 : "Mi", 
+		5 : "Fa",
+		6 : "Sol",
+	}
+	
+	var notes = []  # Liste des mots composant la phrase
+	
+	# Parcours de la liste `melodie`
+	for note in melodie:
+		if allNote.has(note):
+			notes.append(allNote[note])
+		else:
+			notes.append("Inconnu")
+	
+	# Joindre les mots avec une virgule manuellement
+	var resultText = ""  # Initialisation de la chaîne
+	for i in range(len(notes)):
+		resultText += notes[i]
+		if i < len(notes) - 1:  # Ajouter une virgule sauf pour le dernier élément
+			resultText += ", "
+
+	
+	$MarginContainer/VBoxContainer/SolutionRect/SolutionText.text = resultText
+
+	$MarginContainer/VBoxContainer/SolutionRect.visible = true

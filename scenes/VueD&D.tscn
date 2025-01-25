@@ -33,9 +33,43 @@ expand_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Solution" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.254902, 0.254902, 0.254902, 1)
+theme_override_colors/icon_pressed_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_fonts/font = ExtResource("3_ecxot")
+text = "Solution"
+icon = ExtResource("4_334rk")
+flat = true
+clip_text = true
+icon_alignment = 1
+
+[node name="SolutionRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="SolutionText" type="Label" parent="MarginContainer/VBoxContainer/SolutionRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -17.0
+offset_right = -8.0
+offset_bottom = 17.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 24
+text = "Sol, La, Si, Do, Re, Mi, Fa"
+horizontal_alignment = 2
+uppercase = true
 
 [node name="Listen Melody" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -68,7 +102,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ecxot")
 theme_override_font_sizes/font_size = 30
-text = "Melody to compose"
+text = "Melodie à composer"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -220,7 +254,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_ecxot")
 theme_override_font_sizes/font_size = 30
-text = "Notes recover"
+text = "Notes récupérées"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
@@ -278,6 +312,7 @@ size_flags_vertical = 3
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"Music"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Solution" to="." method="_on_solution_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Listen Melody" to="." method="_on_listen_melody_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Check" to="." method="_on_check_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Reset Notes" to="." method="_on_reset_notes_pressed"]
