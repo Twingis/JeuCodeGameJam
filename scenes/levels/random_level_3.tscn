@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="7_tbc8c"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="8_my5e5"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="11_3eqdj"]
-[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="11_mvvga"]
+[ext_resource type="PackedScene" path="res://label_portes.tscn" id="11_mvvga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -1040,7 +1040,7 @@ libraries = {
 }
 script = ExtResource("11_3eqdj")
 
-[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zero"]
+[connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note2" to="." method="_on_note_catch"]
 [connection signal="catch" from="Note3" to="." method="_on_note_catch"]

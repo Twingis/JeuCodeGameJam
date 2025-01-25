@@ -149,7 +149,6 @@ func _process(delta: float) -> void:
 	print("Notes Liste",notes_list)
 	
 
-
 func _on_reset_notes_pressed() -> void:
 	print("reset moment",Global.list_notes)
 	get_tree().change_scene_to_file("res://scenes/VueD&D.tscn")
