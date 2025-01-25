@@ -44,15 +44,19 @@ size_flags_stretch_ratio = 0.5
 [node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/Control4"]
 layout_mode = 0
 offset_left = 155.0
-offset_top = -8.0
+offset_top = -69.0
 offset_right = 994.0
-offset_bottom = 254.0
+offset_bottom = 275.0
 text = "Bienvenue dans ce tutoriel, nous allons dans cette page vous montrez les différentes touches utilisables.
+
 Les touhes directionnelles droite et gauche permettent de se diriger dans leurs directions respectives.
 Pour sauter il faut appuyer sur la touche espace.
-Enfin pour ouvrir une porte pour passer au prochain niveau, il faut appuyer sur E.
+Enfin pour ouvrir une porte pour passer au prochain niveau, il faut trouver et rentrer le bon ordre des 
+notes en déplaçant avec la souris les notes aux endroits voulus, vous pouvez écouter la mélodie autant de 
+fois que vous voulez pour trouver le bon ordre.
 
 Il vous faudra récupérer toutes les notes d'un niveau pour pouvoir passer au suivant.
+Vous aurez un certain temps pour passer chaque salles qui peut être rallonger en ramassant les notes.
 Toutes les 5 salles se trouve un boss que vous devrez vaincre grâce à un QTE (quick time event)."
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
