@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://0t7lbqogugu0"]
+[gd_scene load_steps=7 format=3 uid="uid://0t7lbqogugu0"]
 
 [ext_resource type="Texture2D" uid="uid://o41ufn1qwecv" path="res://assets/menu/wallpaper.png" id="1_auv6r"]
 [ext_resource type="PackedScene" uid="uid://cg4grlbemoasp" path="res://scenes/DragAndDrop.tscn" id="1_nras2"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://ckioo7vedpo3t" path="res://assets/dragAndDropInterface/backgroundNotesEmpty.png" id="2_28f0q"]
 [ext_resource type="FontFile" uid="uid://buwy1injodxjo" path="res://assets/menu/Font/Kenney Future Narrow.ttf" id="3_ecxot"]
 [ext_resource type="Texture2D" uid="uid://dv6tcly7wcs14" path="res://assets/menu/PNG/Grey/Default/button_rectangle_depth_border.png" id="4_334rk"]
-[ext_resource type="Texture2D" uid="uid://gmrxl60dusf6" path="res://assets/dragAndDropInterface/spriteNote_sol.png" id="4_ky4xw"]
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -234,42 +233,35 @@ alignment = 1
 
 [node name="TextureRect1" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 
 [node name="TextureRect2" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 1
 
 [node name="TextureRect3" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 2
 
 [node name="TextureRect4" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 3
 
 [node name="TextureRect5" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 4
 
 [node name="TextureRect6" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 5
 
 [node name="TextureRect7" parent="MarginContainer/VBoxContainer/HBoxContainerNotesRamassee" instance=ExtResource("1_nras2")]
 layout_mode = 2
-texture = ExtResource("4_ky4xw")
 expand_mode = 2
 id = 6
 

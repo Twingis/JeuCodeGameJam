@@ -764,8 +764,10 @@ position = Vector2(324, -189)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("5_75nji")]
-offset_left = 37.0
-offset_right = 9303.0
+offset_left = -418.0
+offset_top = 3.0
+offset_right = 8848.0
+offset_bottom = 1673.0
 speed = 120
 
 [node name="gateway" parent="." instance=ExtResource("6_r02hc")]

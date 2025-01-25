@@ -889,8 +889,10 @@ speed_scale = 3.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" parent="CanvasLayer" instance=ExtResource("7_vt85q")]
-offset_left = 37.0
-offset_right = 9303.0
+offset_left = -419.0
+offset_top = 1.0
+offset_right = 8847.0
+offset_bottom = 1671.0
 speed = 60
 
 [node name="MusiqueJeu" parent="." instance=ExtResource("8_l1lnx")]
