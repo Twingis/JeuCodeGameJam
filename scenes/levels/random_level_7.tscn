@@ -9,13 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://decy70d28q38f" path="res://assets/tiles/tilemap2_packed.png" id="5_b8xba"]
 [ext_resource type="Texture2D" uid="uid://qu7j8ycfsr1" path="res://assets/tiles/tilemap_packed.png" id="6_5o46y"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="6_aprxg"]
-[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="7_fnvtq"]
 [ext_resource type="PackedScene" uid="uid://drs7b5jn6hse6" path="res://scenes/platforms/cloud_big.tscn" id="8_cmb08"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_frcby"]
 [ext_resource type="PackedScene" uid="uid://d0pltjpgjwiy2" path="res://scenes/platforms/cloud_default.tscn" id="9_my6i0"]
-[ext_resource type="PackedScene" path="res://label_portes.tscn" id="9_s5xec"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="9_s5xec"]
 [ext_resource type="PackedScene" uid="uid://e8chgcj0obt7" path="res://scenes/platforms/cloud_small.tscn" id="10_gdl7b"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="16_gxff5"]
+[ext_resource type="PackedScene" uid="uid://dn83j51x0j3qv" path="res://scenes/musique_jeu_5.tscn" id="16_iavhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -1353,8 +1353,6 @@ position = Vector2(315, -261)
 offset_top = 0.0
 offset_bottom = 1670.0
 
-[node name="MusiqueJeu" parent="." instance=ExtResource("7_fnvtq")]
-
 [node name="Note1" parent="." instance=ExtResource("8_frcby")]
 position = Vector2(341, -106)
 
@@ -1405,6 +1403,8 @@ libraries = {
 "": SubResource("AnimationLibrary_14vfc")
 }
 script = ExtResource("16_gxff5")
+
+[node name="MusiqueJeu5" parent="." instance=ExtResource("16_iavhk")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]

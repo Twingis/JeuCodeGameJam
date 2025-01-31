@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://bo0ho82efc1d6" path="res://assets/menu/tilemap-backgrounds_packed.png" id="5_eqnc2"]
 [ext_resource type="PackedScene" uid="uid://gr7tsp4a585d" path="res://scenes/platforms/escalator.tscn" id="6_5djvl"]
 [ext_resource type="PackedScene" uid="uid://5oi56ip58rn8" path="res://scenes/texture_progress_bar.tscn" id="7_vt85q"]
-[ext_resource type="PackedScene" uid="uid://bgydfrn1omvts" path="res://scenes/musique_jeu.tscn" id="8_l1lnx"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="9_lh8o0"]
 [ext_resource type="PackedScene" uid="uid://cggrqiahcqgjb" path="res://scenes/gateway.tscn" id="10_pm7ho"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="11_jlhg6"]
-[ext_resource type="PackedScene" path="res://label_portes.tscn" id="11_p5r1u"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="11_p5r1u"]
+[ext_resource type="PackedScene" uid="uid://bmm822j8ktsaw" path="res://scenes/musique_jeu_3.tscn" id="12_abmp1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
@@ -985,8 +985,6 @@ speed_scale = 3.0
 offset_left = -420.0
 offset_right = 8846.0
 
-[node name="MusiqueJeu" parent="." instance=ExtResource("8_l1lnx")]
-
 [node name="Note" parent="." instance=ExtResource("9_lh8o0")]
 position = Vector2(97, -35)
 
@@ -1039,6 +1037,8 @@ libraries = {
 "": SubResource("AnimationLibrary_vjysa")
 }
 script = ExtResource("11_jlhg6")
+
+[node name="MusiqueJeu3" parent="." instance=ExtResource("12_abmp1")]
 
 [connection signal="zero" from="CanvasLayer/healthBar" to="." method="_on_texture_progress_bar_zéro"]
 [connection signal="catch" from="Note" to="." method="_on_note_catch"]

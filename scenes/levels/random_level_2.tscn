@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsaoy2fasev17" path="res://scenes/platforms/feuilles.tscn" id="7_rdeyh"]
 [ext_resource type="PackedScene" uid="uid://xhgepoioqb6d" path="res://scenes/note.tscn" id="8_apt32"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="13_36rcd"]
-[ext_resource type="PackedScene" path="res://label_portes.tscn" id="13_kaexu"]
+[ext_resource type="PackedScene" uid="uid://btu88khaggb7x" path="res://label_portes.tscn" id="13_kaexu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijlrn"]
 size = Vector2(20, 10)
