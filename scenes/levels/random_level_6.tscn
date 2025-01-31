@@ -863,8 +863,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAEAAAAAAABAAAAAQAEAAAAAAACAAAAAQAEAAA
 tile_set = SubResource("TileSet_xga4e")
 
 [node name="Note" parent="." instance=ExtResource("7_axw73")]
-visible = false
-position = Vector2(94, -34)
+position = Vector2(119, -180)
 
 [node name="gateway" parent="." instance=ExtResource("8_xetxm")]
 position = Vector2(656, -8)
